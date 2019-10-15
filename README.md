@@ -1,6 +1,6 @@
 # jest-preset
-MOXY's Jest configuration to be used across several JavaScript projects.
 
+MOXY's Jest configuration to be used across several JavaScript projects.
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
@@ -15,8 +15,6 @@ MOXY's Jest configuration to be used across several JavaScript projects.
 [david-dm-image]:https://img.shields.io/david/moxystudio/jest-preset.svg
 [david-dm-dev-url]:https://david-dm.org/moxystudio/jest-preset?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/jest-preset.svg
-
-[Jest](https://jestjs.io/) preset to be used at MOXY.
 
 
 ## Installation
@@ -40,7 +38,7 @@ You can override the preset options like so:
 
 ```js
 module.exports = {
-    preset: '../jest-preset',
+    preset: '@moxy/jest-preset',
 
     // Will override testPathIgnorePatterns in preset
     testPathIgnorePatterns: [
