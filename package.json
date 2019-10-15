@@ -1,0 +1,45 @@
+{
+  "name": "@moxy/jest-preset",
+  "version": "0.0.1",
+  "description": "MOXY Jest configuration to be used across several JavaScript projects.",
+  "main": "jest-preset.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "files": [
+    "jest.setup.js"
+  ],
+  "keywords": [
+    "jest-config",
+    "jestconfig",
+    "jest",
+    "test"
+  ],
+  "author": "João Silva <joao.silva@moxy.studio>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-moxy": "^9.1.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "jest-serializer-path": "^0.1.15",
+    "lint-staged": "^9.4.2",
+    "standard-version": "^7.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "peerDependencies": {
+    "jest": "^24.9.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-enzyme": "^7.1.1",
+    "jest-file": "^1.0.0"
+  }
+}
