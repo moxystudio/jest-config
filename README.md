@@ -31,23 +31,19 @@ $ npm install @moxy/jest-preset
 Create `jest.config.js` at the root of your project:
 
 ```js
-module.exports = {
-    preset: '@moxy/jest-preset',
-};
+const jestPreset = require('@moxy/jest-preset')
+
+module.exports = jestPreset();
 ```
 
-You can override the preset options like so:
+Options sent as an argument will safely spread into the preset options. You can change or add your own Jest configuration options to the preset like so:
 
 ```js
-module.exports = {
-    preset: '../jest-preset',
+const jestPreset = require('@moxy/jest-preset')
 
-    // Will override testPathIgnorePatterns in preset
-    testPathIgnorePatterns: [
-        '/ignore/',
-    ],
-};
-
+module.exports = jestPreset({
+    /* options */
+});
 ```
 
 
