@@ -1,9 +1,3 @@
 'use strict';
 
-const jestConfig = require('./index');
-
-module.exports = jestConfig({
-    snapshotSerializers: [
-        'jest-serializer-path',
-    ],
-});
+module.exports = require('./index')();

@@ -29,7 +29,7 @@ $ npm install @moxy/jest-config
 Create `jest.config.js` at the root of your project:
 
 ```js
-module.exports = require('@moxy/jest-config')
+module.exports = require('@moxy/jest-config')()
 ```
 
 Options sent as an argument will safely spread into the option of this configuration. You can change or add your own Jest configuration options to the preset like so:
@@ -47,7 +47,7 @@ This config also has some options that add default configurations for certain en
 
 | Option | Description | Type | Default |
 |  ---   |     ---     | ---  |   ---   |
-| react   | Adds setup file for `Enzyme` and `React 16.x` | boolean  | false |
+| enzyme   | Adds setup file for `Enzyme` and `React 16.x` | boolean  | false |
 
 
 

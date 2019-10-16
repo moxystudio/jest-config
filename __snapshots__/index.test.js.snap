@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should have react option 1`] = `
+exports[`should have enzyme option 1`] = `
 Object {
   "collectCoverage": true,
   "coverageThreshold": Object {
@@ -19,6 +19,9 @@ Object {
   ],
   "setupFilesAfterEnv": Array [
     "./node_modules/jest-enzyme/lib/index.js",
+  ],
+  "snapshotSerializers": Array [
+    "jest-serializer-path",
   ],
   "transform": Object {
     "/.(eot|ttf|woff|woff2|otf)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
@@ -46,6 +49,9 @@ Object {
   },
   "setupFilesAfterEnv": Array [
     "./node_modules/jest-enzyme/lib/index.js",
+  ],
+  "snapshotSerializers": Array [
+    "jest-serializer-path",
   ],
   "transform": Object {
     "/.(eot|ttf|woff|woff2|otf)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",

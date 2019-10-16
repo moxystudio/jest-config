@@ -6,8 +6,8 @@ it('should receive and return options', () => {
     expect(jestPreset({ should: 'work' })).toHaveProperty('should', 'work');
 });
 
-it('should have react option', () => {
-    const config = jestPreset({ react: true });
+it('should have enzyme option', () => {
+    const config = jestPreset({ enzyme: true });
 
     expect(config).toHaveProperty('setupFiles', ['./enzyme-react.setup.js']);
     expect(config).toMatchSnapshot();
