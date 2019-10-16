@@ -1,45 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should have boilerplate option 1`] = `
-Object {
-  "boilerplate": true,
-  "collectCoverage": true,
-  "collectCoverageFrom": Array [
-    "www/**/*.js",
-  ],
-  "coveragePathIgnorePatterns": Array [
-    "/*.data.js/",
-  ],
-  "coverageThreshold": Object {
-    "global": Object {
-      "branches": 80,
-      "functions": 80,
-      "lines": 80,
-      "statements": -10,
-    },
-  },
-  "moduleNameMapper": Object {
-    "/.css$": "<PROJECT_ROOT>/node_modules/identity-obj-proxy/src/index.js",
-  },
-  "setupFiles": Array [
-    "./enzyme-react.setup.js",
-  ],
-  "setupFilesAfterEnv": Array [
-    "./node_modules/jest-enzyme/lib/index.js",
-  ],
-  "testPathIgnorePatterns": Array [
-    "/*.data.js/",
-  ],
-  "transform": Object {
-    "/.(eot|ttf|woff|woff2|otf)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
-    "/.(mp3|flac|wav|aac|ogg|oga|mp4|m4a|webm|ogv)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
-    "/.(png|jpg|jpeg|gif|webp|ico)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
-    "/.(svg)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
-    "/.js$": "<PROJECT_ROOT>/node_modules/babel-jest/build/index.js",
-  },
-}
-`;
-
 exports[`should have react option 1`] = `
 Object {
   "collectCoverage": true,
@@ -54,7 +14,6 @@ Object {
   "moduleNameMapper": Object {
     "/.css$": "<PROJECT_ROOT>/node_modules/identity-obj-proxy/src/index.js",
   },
-  "react": true,
   "setupFiles": Array [
     "./enzyme-react.setup.js",
   ],

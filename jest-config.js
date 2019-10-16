@@ -1,14 +1,14 @@
 'use strict';
 
-module.exports = (options = {}) => {
+module.exports = (userOptions = {}) => {
     const {
         transform = {},
         moduleNameMapper = {},
         setupFilesAfterEnv = [],
         coverageThreshold = {},
-        boilerplate = false,
         react = false,
-    } = options;
+        ...options
+    } = userOptions;
 
     const config = {
         transform: {
@@ -39,31 +39,6 @@ module.exports = (options = {}) => {
         },
         ...options,
     };
-
-    if (boilerplate) {
-        const {
-            setupFiles = [],
-            collectCoverageFrom = [],
-            testPathIgnorePatterns = [],
-            coveragePathIgnorePatterns = [],
-        } = options;
-
-        config.collectCoverageFrom = [
-            'www/**/*.js',
-            ...collectCoverageFrom,
-        ];
-        config.testPathIgnorePatterns = [
-            '/*.data.js/',
-            ...testPathIgnorePatterns,
-        ];
-        config.coveragePathIgnorePatterns = [
-            '/*.data.js/',
-            ...coveragePathIgnorePatterns,
-        ];
-        config.setupFiles = [
-            './enzyme-react.setup.js',
-            ...setupFiles];
-    }
 
     if (react) {
         const { setupFiles = [] } = options;

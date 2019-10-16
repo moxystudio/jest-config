@@ -29,19 +29,15 @@ $ npm install @moxy/jest-config
 Create `jest.config.js` at the root of your project:
 
 ```js
-const jestConfig = require('@moxy/jest-config')
-
-module.exports = jestConfig();
+module.exports = require('@moxy/jest-config')
 ```
 
 Options sent as an argument will safely spread into the option of this configuration. You can change or add your own Jest configuration options to the preset like so:
 
 ```js
-const jestConfig = require('@moxy/jest-config')
-
-module.exports = jestConfig({
+module.exports = require('@moxy/jest-config')({
     /* options */
-});
+})
 ```
 
 
@@ -51,7 +47,6 @@ This config also has some options that add default configurations for certain en
 
 | Option | Description | Type | Default |
 |  ---   |     ---     | ---  |   ---   |
-| boilerplate   | Adds configurations for `next-with-moxy` boilerplate. If you set this to true, there is  no need to set the `react` option to true. | boolean  | false |
 | react   | Adds setup file for `Enzyme` and `React 16.x` | boolean  | false |
 
 
