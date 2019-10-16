@@ -1,6 +1,6 @@
 {
   "name": "@moxy/jest-preset",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "MOXY Jest configuration to be used across several JavaScript projects.",
   "main": "jest-preset.js",
   "scripts": {

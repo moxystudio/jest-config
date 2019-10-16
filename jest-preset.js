@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = {
-    setupFiles: ['./jest.setup.js'],
     // Transform files for Jest
     transform: {
         '\\.js$': require.resolve('babel-jest'),
@@ -21,10 +20,7 @@ module.exports = {
     setupFilesAfterEnv: [
         './node_modules/jest-enzyme/lib/index.js',
     ],
-    // Coverage
-    collectCoverageFrom: [
-        'www/**/*.js',
-    ],
+    collectCoverage: true,
     coverageThreshold: {
         global: {
             branches: 80,
@@ -33,10 +29,4 @@ module.exports = {
             statements: -10,
         },
     },
-    testPathIgnorePatterns: [
-        '/*.data.js/',
-    ],
-    coveragePathIgnorePatterns: [
-        '/*.data.js/',
-    ],
 };
