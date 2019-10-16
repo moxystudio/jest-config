@@ -1,5 +1,5 @@
 'use strict';
 
-const jestPreset = require('./jest-preset');
+const jestConfig = require('./jest-config');
 
-module.exports = jestPreset;
+module.exports = jestConfig;

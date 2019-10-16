@@ -2,28 +2,20 @@
 
 module.exports = (options = {}) => {
     const {
-        setupFiles = [],
         transform = {},
         moduleNameMapper = {},
         setupFilesAfterEnv = [],
-        collectCoverageFrom = [],
         coverageThreshold = {},
-        testPathIgnorePatterns = [],
-        coveragePathIgnorePatterns = [],
+        boilerplate = false,
+        react = false,
     } = options;
 
-    return {
-        setupFiles: ['./jest.setup.js', ...setupFiles],
-        // Transform files for Jest
+    const config = {
         transform: {
             '\\.js$': require.resolve('babel-jest'),
-            // Raster images (png, jpg, etc)
             '\\.(png|jpg|jpeg|gif|webp|ico)$': require.resolve('jest-file'),
-            // Web fonts
             '\\.(eot|ttf|woff|woff2|otf)$': require.resolve('jest-file'),
-            // Audio & Video
             '\\.(mp3|flac|wav|aac|ogg|oga|mp4|m4a|webm|ogv)$': require.resolve('jest-file'),
-            // SVGs
             '\\.(svg)$': require.resolve('jest-file'),
             ...transform,
         },
@@ -31,17 +23,11 @@ module.exports = (options = {}) => {
             '\\.css$': require.resolve('identity-obj-proxy'),
             ...moduleNameMapper,
         },
-        // Snapshots
         setupFilesAfterEnv: ['./node_modules/jest-enzyme/lib/index.js',
             ...setupFilesAfterEnv,
         ],
-        // Coverage
-        collectCoverageFrom: [
-            'www/**/*.js',
-            ...collectCoverageFrom,
-        ],
+        collectCoverage: true,
         coverageThreshold: {
-            ...coverageThreshold,
             global: {
                 branches: 80,
                 functions: 80,
@@ -49,15 +35,44 @@ module.exports = (options = {}) => {
                 statements: -10,
                 ...coverageThreshold.global,
             },
+            ...coverageThreshold,
         },
-        testPathIgnorePatterns: [
-            '/*.data.js/',
-            ...testPathIgnorePatterns,
-        ],
-        coveragePathIgnorePatterns: [
-            '/*.data.js/',
-            ...coveragePathIgnorePatterns,
-        ],
         ...options,
     };
+
+    if (boilerplate) {
+        const {
+            setupFiles = [],
+            collectCoverageFrom = [],
+            testPathIgnorePatterns = [],
+            coveragePathIgnorePatterns = [],
+        } = options;
+
+        config.collectCoverageFrom = [
+            'www/**/*.js',
+            ...collectCoverageFrom,
+        ];
+        config.testPathIgnorePatterns = [
+            '/*.data.js/',
+            ...testPathIgnorePatterns,
+        ];
+        config.coveragePathIgnorePatterns = [
+            '/*.data.js/',
+            ...coveragePathIgnorePatterns,
+        ];
+        config.setupFiles = [
+            './enzyme-react.setup.js',
+            ...setupFiles];
+    }
+
+    if (react) {
+        const { setupFiles = [] } = options;
+
+        config.setupFiles = [
+            './enzyme-react.setup.js',
+            ...setupFiles];
+    }
+
+    return config;
 };
+

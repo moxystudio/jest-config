@@ -1,28 +1,26 @@
-# jest-preset
-MOXY's Jest configuration to be used across several JavaScript projects.
-
+# jest-config
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
-[npm-url]:https://npmjs.org/package/@moxy/jest-preset
-[downloads-image]:https://img.shields.io/npm/dm/@moxy/jest-preset.svg
-[npm-image]:https://img.shields.io/npm/v/@moxy/jest-preset.svg
-[travis-url]:https://travis-ci.org/moxystudio/jest-preset
-[travis-image]:http://img.shields.io/travis/moxystudio/jest-preset/master.svg
-[codecov-url]:https://codecov.io/gh/moxystudio/jest-preset
-[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/jest-preset/master.svg
-[david-dm-url]:https://david-dm.org/moxystudio/jest-preset
-[david-dm-image]:https://img.shields.io/david/moxystudio/jest-preset.svg
-[david-dm-dev-url]:https://david-dm.org/moxystudio/jest-preset?type=dev
-[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/jest-preset.svg
+[npm-url]:https://npmjs.org/package/@moxy/jest-config
+[downloads-image]:https://img.shields.io/npm/dm/@moxy/jest-config.svg
+[npm-image]:https://img.shields.io/npm/v/@moxy/jest-config.svg
+[travis-url]:https://travis-ci.org/moxystudio/jest-config
+[travis-image]:http://img.shields.io/travis/moxystudio/jest-config/master.svg
+[codecov-url]:https://codecov.io/gh/moxystudio/jest-config
+[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/jest-config/master.svg
+[david-dm-url]:https://david-dm.org/moxystudio/jest-config
+[david-dm-image]:https://img.shields.io/david/moxystudio/jest-config.svg
+[david-dm-dev-url]:https://david-dm.org/moxystudio/jest-config?type=dev
+[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/jest-config.svg
 
-[Jest](https://jestjs.io/) preset to be used at MOXY.
+MOXY's Jest configuration to be used across several JavaScript projects.
 
 
 ## Installation
 
 ```sh
-$ npm install @moxy/jest-preset
+$ npm install @moxy/jest-config
 ```
 
 
@@ -31,20 +29,31 @@ $ npm install @moxy/jest-preset
 Create `jest.config.js` at the root of your project:
 
 ```js
-const jestPreset = require('@moxy/jest-preset')
+const jestConfig = require('@moxy/jest-config')
 
-module.exports = jestPreset();
+module.exports = jestConfig();
 ```
 
-Options sent as an argument will safely spread into the preset options. You can change or add your own Jest configuration options to the preset like so:
+Options sent as an argument will safely spread into the option of this configuration. You can change or add your own Jest configuration options to the preset like so:
 
 ```js
-const jestPreset = require('@moxy/jest-preset')
+const jestConfig = require('@moxy/jest-config')
 
-module.exports = jestPreset({
+module.exports = jestConfig({
     /* options */
 });
 ```
+
+
+## API
+
+This config also has some options that add default configurations for certain environments. The following table lists all options.
+
+| Option | Description | Type | Default |
+|  ---   |     ---     | ---  |   ---   |
+| boilerplate   | Adds configurations for `next-with-moxy` boilerplate. If you set this to true, there is  no need to set the `react` option to true. | boolean  | false |
+| react   | Adds setup file for `Enzyme` and `React 16.x` | boolean  | false |
+
 
 
 ## Tests

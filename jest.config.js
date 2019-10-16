@@ -1,12 +1,8 @@
 'use strict';
 
-const config = require('./index');
+const jestConfig = require('./index');
 
-module.exports = config({
-    collectCoverageFrom: [
-        'index.js',
-        'jest-preset.js',
-    ],
+module.exports = jestConfig({
     snapshotSerializers: [
         'jest-serializer-path',
     ],

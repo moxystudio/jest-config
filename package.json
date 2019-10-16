@@ -1,14 +1,14 @@
 {
-  "name": "@moxy/jest-preset",
-  "version": "0.0.1",
+  "name": "@moxy/jest-config",
+  "version": "0.0.0",
   "description": "MOXY Jest configuration to be used across several JavaScript projects.",
-  "main": "jest-preset.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --coverage"
   },
   "files": [
-    "jest-preset.js",
-    "jest.setup.js"
+    "jest-config.js",
+    "enzyme-react.setup.js"
   ],
   "keywords": [
     "jest-config",
@@ -32,9 +32,7 @@
     "standard-version": "^7.0.0"
   },
   "peerDependencies": {
-    "jest": "^24.9.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "jest": "^24.9.0"
   },
   "dependencies": {
     "enzyme": "^3.10.0",
