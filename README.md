@@ -29,26 +29,21 @@ $ npm install @moxy/jest-config
 Create `jest.config.js` at the root of your project:
 
 ```js
-module.exports = require('@moxy/jest-config')()
+module.exports = require('@moxy/jest-config')();
 ```
 
-Options sent as an argument will safely spread into the option of this configuration. You can change or add your own Jest configuration options to the preset like so:
+If you want to add your own options, you must import this configuration and change the returned object, which you must then export.
 
 ```js
-module.exports = require('@moxy/jest-config')({
-    /* options */
-})
+const createConfig = require('@moxy/jest-config');
+
+const myConfig = createConfig();
+
+// Do not test '.data.js' files
+myConfig.testPathIgnorePatterns = '/.*.data.js$/'
+
+module.exports = myConfig;
 ```
-
-
-## API
-
-This config also has some options that add default configurations for certain environments. The following table lists all options.
-
-| Option | Description | Type | Default |
-|  ---   |     ---     | ---  |   ---   |
-| enzyme   | Adds setup file for `Enzyme` and `React 16.x` | boolean  | false |
-
 
 
 ## Tests
