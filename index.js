@@ -6,6 +6,7 @@ module.exports = () => ({
         '\\.(png|jpg|jpeg|gif|webp|ico)$': require.resolve('jest-file'),
         '\\.(eot|ttf|woff|woff2|otf)$': require.resolve('jest-file'),
         '\\.(mp3|flac|wav|aac|ogg|oga|mp4|m4a|webm|ogv)$': require.resolve('jest-file'),
+        '\\.(obj|mtl|fnt|glb)$': require.resolve('jest-file'),
         '\\.(svg)$': require.resolve('jest-file'),
     },
     moduleNameMapper: {
