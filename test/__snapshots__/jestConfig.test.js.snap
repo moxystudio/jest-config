@@ -24,6 +24,7 @@ Object {
   "transform": Object {
     "/.(eot|ttf|woff|woff2|otf)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
     "/.(mp3|flac|wav|aac|ogg|oga|mp4|m4a|webm|ogv)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
+    "/.(obj|mtl|fnt|glb)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
     "/.(png|jpg|jpeg|gif|webp|ico)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
     "/.(svg)$": "<PROJECT_ROOT>/node_modules/jest-file/index.js",
     "/.js$": "<PROJECT_ROOT>/node_modules/babel-jest/build/index.js",

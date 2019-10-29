@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "collectCoverageFrom": Array [
+    "www/**/*.js",
+  ],
+  "coveragePathIgnorePatterns": Array [
+    ".*/.data/.js",
+  ],
+  "setupFilesAfterEnv": Array [
+    "@testing-library/jest-dom/extend-expect",
+  ],
+  "transform": Object {
+    "/.data-url/.": "<PROJECT_ROOT>/addons/withWeb/data-url.js",
+    "/.inline/.": "<PROJECT_ROOT>/addons/withWeb/inline.js",
+  },
+}
+`;

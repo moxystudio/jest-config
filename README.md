@@ -29,18 +29,60 @@ $ npm install @moxy/jest-config
 Create `jest.config.js` at the root of your project:
 
 ```js
-module.exports = require('@moxy/jest-config')();
+const { jestConfig } = require('@moxy/jest-config')
+
+module.exports = jestConfig();
 ```
 
-If you want to add your own options, you must import this configuration and change the returned object, which you must then export.
+## Addons
+
+This package comes with some preset addons that add further options to the Jest configuration to cover the needs of common situations. Here's a list of all addons we offer so far:
+
+| Addon | Description |
+|  ---   |     ---     |
+| [withWeb](addons/withWeb/withWeb.js)   | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy) |
+
+### Instructions
+
+
+To use addons, use the `compose` function offered with this package. **Keep in mind**, the first item should always be the default configuration, `jestConfig`! Here's an example of using `compose`:
 
 ```js
-const createConfig = require('@moxy/jest-config');
+const { compose, jestConfig, withWeb } = require('@moxy/jest-config');
 
-const myConfig = createConfig();
+module.exports = compose([jestConfig, withWeb]);
+```
+
+If you want to make your own addon, you can! It just needs to have the following structure:
+
+```js
+const { compose, jestConfig } = require('@moxy/jest-config');
+
+// Receives previous configuration
+function myAddon(configuration) {
+
+    // Add your options to configuration
+    // For example, do not test '.data.js' files
+    configuration.testPathIgnorePatterns = ['/.*.data.js$/']
+
+    // Returns configuration with added options
+    return configuration;
+}
+
+module.exports = compose([jestConfig, myAddon]);
+```
+
+### Without addons
+
+If you want to add your own options without using our addons or making your own, you must import this configuration and change the returned object, which you must then export.
+
+```js
+const { jestConfig } = require('@moxy/jest-config')
+
+const myConfig = jestConfig();
 
 // Do not test '.data.js' files
-myConfig.testPathIgnorePatterns = '/.*.data.js$/'
+myConfig.testPathIgnorePatterns = ['/.*.data.js$/']
 
 module.exports = myConfig;
 ```
@@ -59,4 +101,3 @@ $ npm t -- --watch  # To run watch mode
 ## License
 
 Released under the [MIT License](https://opensource.org/licenses/mit-license.php).
-

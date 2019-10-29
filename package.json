@@ -6,7 +6,11 @@
   "scripts": {
     "test": "jest --coverage"
   },
-  "files":[],
+  "files": [
+    "addons/**",
+    "composer.js",
+    "jestConfig.js"
+  ],
   "keywords": [
     "jest-config",
     "jestconfig",
@@ -29,8 +33,10 @@
     "jest": "^24.9.0"
   },
   "dependencies": {
-    "jest-serializer-path": "^0.1.15",
+    "@testing-library/jest-dom": "^4.2.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest-file": "^1.0.0"
+    "jest-file": "^1.0.0",
+    "jest-serializer-path": "^0.1.15",
+    "mime": "^2.4.4"
   }
 }
