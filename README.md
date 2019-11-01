@@ -57,10 +57,9 @@ const { compose, baseConfig } = require('@moxy/jest-config');
 
 // Receives previous configuration
 const withAddon = (configuration) => {
-
     // Add your options to configuration
     // For example, do not test '.data.js' files
-    configuration.testPathIgnorePatterns = ['/.*.data.js$/']
+    configuration.testPathIgnorePatterns = ['/.*.data.js$/'];
 
     // Returns configuration with added options
     return configuration;
@@ -74,12 +73,12 @@ module.exports = compose([baseConfig, withAddon]);
 If you want to add your own options without using our addons or making your own, you may imperatively change the returned base config like so:
 
 ```js
-const { baseConfig } = require('@moxy/jest-config')
+const { baseConfig } = require('@moxy/jest-config');
 
 const myConfig = baseConfig();
 
 // Do not test '.data.js' files
-myConfig.testPathIgnorePatterns = ['/.*.data.js$/']
+myConfig.testPathIgnorePatterns = ['/.*.data.js$/'];
 
 module.exports = myConfig;
 ```

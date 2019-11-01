@@ -1,17 +1,28 @@
 'use strict';
 
 const fs = require('fs');
+const tmp = require('tmp-sync');
 const inlineTransformer = require('../addons/with-web/inline');
+
+let dir = '';
+
+beforeAll(() => {
+    dir = tmp.in(__dirname);
+});
+
+afterAll(() => {
+    tmp.clean();
+});
 
 it('should return inline content of file', () => {
     const fileContent = 'this is a file!';
-    const fileName = `${__dirname}/test-files/inline_test_file.txt`;
+    const filename = `${dir}/inline-test-file.txt`;
 
-    fs.writeFileSync(fileName, fileContent);
+    fs.writeFileSync(filename, fileContent);
 
-    const output = inlineTransformer.process(null, fileName);
+    const output = inlineTransformer.process(null, filename);
 
-    fs.unlinkSync(fileName);
+    fs.unlinkSync(filename);
 
     expect(output).toContain(fileContent);
     expect(output).toMatchSnapshot();
