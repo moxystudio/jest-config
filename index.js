@@ -1,7 +1,7 @@
 'use strict';
 
 const compose = require('./composer');
-const jestConfig = require('./jestConfig');
+const baseConfig = require('./baseCoofig');
 const withWeb = require('./addons/withWeb');
 
-module.exports = { compose, jestConfig, withWeb };
+module.exports = { compose, baseConfig, withWeb };

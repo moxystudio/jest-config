@@ -1,11 +1,11 @@
 'use strict';
 
 const fs = require('fs');
-const inlineTransformer = require('../addons/withWeb/inline');
+const inlineTransformer = require('../addons/with-web/inline');
 
 it('should return inline content of file', () => {
     const fileContent = 'this is a file!';
-    const fileName = './inline_test_file.txt';
+    const fileName = `${__dirname}/test-files/inline_test_file.txt`;
 
     fs.writeFileSync(fileName, fileContent);
 

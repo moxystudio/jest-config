@@ -20,3 +20,7 @@ it('should throw when argument is not an array', () => {
 
     expect(() => compose(notAnArray)).toThrow(/not an array/);
 });
+
+it('should return an empty object if not sent anything', () => {
+    expect(compose()).toStrictEqual({});
+});

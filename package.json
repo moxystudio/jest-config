@@ -9,13 +9,14 @@
   "files": [
     "addons/**",
     "composer.js",
-    "jestConfig.js"
+    "baseConfig.js"
   ],
   "keywords": [
     "jest-config",
     "jestconfig",
     "jest",
-    "test"
+    "test",
+    "preset"
   ],
   "author": "João Silva <joao.silva@moxy.studio>",
   "license": "MIT",

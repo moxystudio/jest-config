@@ -20,7 +20,7 @@ MOXY's Jest configuration to be used across several JavaScript projects.
 ## Installation
 
 ```sh
-$ npm install @moxy/jest-config
+$ npm install --save-dev @moxy/jest-config
 ```
 
 
@@ -29,37 +29,34 @@ $ npm install @moxy/jest-config
 Create `jest.config.js` at the root of your project:
 
 ```js
-const { jestConfig } = require('@moxy/jest-config')
+const { baseConfig } = require('@moxy/jest-config')
 
-module.exports = jestConfig();
+module.exports = baseConfig();
 ```
 
 ## Addons
 
-This package comes with some preset addons that add further options to the Jest configuration to cover the needs of common situations. Here's a list of all addons we offer so far:
+This packages comes with extra addons that further tweak the base Jest configuration to cover the needs of common situations. Here's a list of all addons we offer so far:
 
 | Addon | Description |
-|  ---   |     ---     |
-| [withWeb](addons/withWeb/withWeb.js)   | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy) |
+| --- | --- |
+| [withWeb](addons/withWeb/withWeb.js) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy) |
 
-### Instructions
-
-
-To use addons, use the `compose` function offered with this package. **Keep in mind**, the first item should always be the default configuration, `jestConfig`! Here's an example of using `compose`:
+To use addons, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose`:
 
 ```js
-const { compose, jestConfig, withWeb } = require('@moxy/jest-config');
+const { compose, baseConfig, withWeb } = require('@moxy/jest-config');
 
-module.exports = compose([jestConfig, withWeb]);
+module.exports = compose([baseConfig, withWeb]);
 ```
 
 If you want to make your own addon, you can! It just needs to have the following structure:
 
 ```js
-const { compose, jestConfig } = require('@moxy/jest-config');
+const { compose, baseConfig } = require('@moxy/jest-config');
 
 // Receives previous configuration
-function myAddon(configuration) {
+const withAddon = (configuration) => {
 
     // Add your options to configuration
     // For example, do not test '.data.js' files
@@ -69,17 +66,17 @@ function myAddon(configuration) {
     return configuration;
 }
 
-module.exports = compose([jestConfig, myAddon]);
+module.exports = compose([baseConfig, withAddon]);
 ```
 
 ### Without addons
 
-If you want to add your own options without using our addons or making your own, you must import this configuration and change the returned object, which you must then export.
+If you want to add your own options without using our addons or making your own, you may imperatively change the returned base config like so:
 
 ```js
-const { jestConfig } = require('@moxy/jest-config')
+const { baseConfig } = require('@moxy/jest-config')
 
-const myConfig = jestConfig();
+const myConfig = baseConfig();
 
 // Do not test '.data.js' files
 myConfig.testPathIgnorePatterns = ['/.*.data.js$/']

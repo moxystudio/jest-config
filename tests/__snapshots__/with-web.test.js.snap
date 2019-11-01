@@ -12,8 +12,8 @@ Object {
     "@testing-library/jest-dom/extend-expect",
   ],
   "transform": Object {
-    "/.data-url/.": "<PROJECT_ROOT>/addons/withWeb/data-url.js",
-    "/.inline/.": "<PROJECT_ROOT>/addons/withWeb/inline.js",
+    "/.data-url/.": "<PROJECT_ROOT>/addons/with-web/data-url.js",
+    "/.inline/.": "<PROJECT_ROOT>/addons/with-web/inline.js",
   },
 }
 `;

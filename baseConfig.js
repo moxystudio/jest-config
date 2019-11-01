@@ -21,9 +21,7 @@ module.exports = () => ({
             statements: -10,
         },
     },
-    snapshotSerializers: [require.resolve('jest-serializer-path')],
-    coveragePathIgnorePatterns: [],
-    testPathIgnorePatterns: [],
-    setupFilesAfterEnv: [],
-    setupFiles: [],
+    snapshotSerializers: [
+        require.resolve('jest-serializer-path'),
+    ],
 });
