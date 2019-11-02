@@ -18,8 +18,6 @@ it('should return inline content of file', () => {
 
     const output = inlineTransformer.process(null, filename);
 
-    fs.unlinkSync(filename);
-
     expect(output).toContain(fileContent);
     expect(output).toMatchSnapshot();
 });

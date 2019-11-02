@@ -2,6 +2,6 @@
 
 const compose = require('./composer');
 const baseConfig = require('./base-config');
-const withWeb = require('./addons/withWeb');
+const addons = require('./addons');
 
-module.exports = { compose, baseConfig, withWeb };
+module.exports = { compose, baseConfig, ...addons };

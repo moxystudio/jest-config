@@ -22,8 +22,6 @@ it('should return string containing data-url', () => {
 
     const output = dataUrlTransformer.process(null, filename);
 
-    fs.unlinkSync(filename);
-
     expect(output).toMatch(matcher);
     expect(output).toMatchSnapshot();
 });
@@ -36,8 +34,6 @@ it('should throw when it cannot guess the MIME type of a file and show extension
 
     expect(() => dataUrlTransformer.process(null, filename)).toThrow(/Could not guess/);
     expect(() => dataUrlTransformer.process(null, filename)).toThrow(path.extname(filename));
-
-    fs.unlinkSync(filename);
 });
 
 it('should throw when it cannot guess the MIME type of a file and show whole filename when there is no extension', () => {
@@ -48,6 +44,4 @@ it('should throw when it cannot guess the MIME type of a file and show whole fil
 
     expect(() => dataUrlTransformer.process(null, filename)).toThrow(/Could not guess/);
     expect(() => dataUrlTransformer.process(null, filename)).toThrow(path.basename(filename));
-
-    fs.unlinkSync(filename);
 });
