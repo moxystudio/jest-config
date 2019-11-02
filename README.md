@@ -63,7 +63,7 @@ const withAddon = (configuration) => {
 
     // Returns configuration with added options
     return configuration;
-}
+};
 
 module.exports = compose([baseConfig, withAddon]);
 ```

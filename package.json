@@ -13,7 +13,7 @@
   "files": [
     "addons/**",
     "composer.js",
-    "baseConfig.js"
+    "base-config.js"
   ],
   "keywords": [
     "jest-config",

@@ -4,11 +4,7 @@ const fs = require('fs');
 const tmp = require('tmp-sync');
 const inlineTransformer = require('../addons/with-web/inline');
 
-let dir = '';
-
-beforeAll(() => {
-    dir = tmp.in(__dirname);
-});
+const dir = tmp.in(__dirname);
 
 afterAll(() => {
     tmp.clean();

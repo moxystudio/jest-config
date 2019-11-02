@@ -8,7 +8,7 @@ module.exports = {
     process(src, filename) {
         const mimeType = mime.getType(filename);
 
-        if (mimeType == null) {
+        if (!mimeType) {
             const fileExtension = path.extname(filename) || path.basename(filename);
 
             throw new Error(`Could not guess MIME type of ${fileExtension}`);

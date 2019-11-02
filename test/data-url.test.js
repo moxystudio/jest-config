@@ -5,11 +5,7 @@ const path = require('path');
 const tmp = require('tmp-sync');
 const dataUrlTransformer = require('../addons/with-web/data-url');
 
-let dir = '';
-
-beforeAll(() => {
-    dir = tmp.in(__dirname);
-});
+const dir = tmp.in(__dirname);
 
 afterAll(() => {
     tmp.clean();
