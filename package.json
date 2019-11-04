@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.0",
+    "ci-info": "^2.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest-file": "^1.0.0",
     "jest-serializer-path": "^0.1.15",

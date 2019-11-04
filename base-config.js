@@ -1,5 +1,7 @@
 'use strict';
 
+const { isCI } = require('ci-info');
+
 module.exports = () => ({
     transform: {
         '\\.js$': require.resolve('babel-jest'),
@@ -12,7 +14,7 @@ module.exports = () => ({
     moduleNameMapper: {
         '\\.css$': require.resolve('identity-obj-proxy'),
     },
-    collectCoverage: true,
+    collectCoverage: isCI,
     coverageThreshold: {
         global: {
             branches: 80,
