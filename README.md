@@ -34,13 +34,22 @@ const { baseConfig } = require('@moxy/jest-config')
 module.exports = baseConfig();
 ```
 
+### What's included in `baseConfig`?
+
+Our `baseConfig` has project agnostic configurations, meant to help any project regardless of their purpose, including;
+- **Transform**: Preprocessors for `.js` files as well as other common filetypes.
+- **Module name mapping:** For `.css` files, to correctly mock `className` lookups when using CSS Modules.
+- **Coverage**: By default, coverage is only verified in CI. This feature is supported by [`cix-info`](https://github.com/watson/ci-info), which you can check for information about supported CI services.
+- **Coverage thresholds:** For strict but workable thresholds.
+- **Snapshot serializing:** To remove absolute paths from your snapshots, reducing conflicts with in CI.
+
 ## Addons
 
 This packages comes with extra addons that further tweak the base Jest configuration to cover the needs of common situations. Here's a list of all addons we offer so far:
 
-| Addon | Description |
-| --- | --- |
-| [withWeb](addons/withWeb/withWeb.js) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy) |
+| Addon | Description | Additions |
+| :---: | --- | --- |
+| [withWeb](addons/withWeb/withWeb.js) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy) | - Preprocessors for data-url file imports and inline file content imports <br> - [`jest-dom`](https://github.com/testing-library/jest-dom) to allow clearer asserting of the state the a DOM. <br> - Coverage sources and ignore patterns to conform to our boilerplate's conventions. |
 
 To use addons, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose`:
 
