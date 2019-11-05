@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "MOXY Jest configuration to be used across several JavaScript projects.",
   "main": "index.js",
+  "repository": "https://github.com/moxystudio/jest-config",
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
