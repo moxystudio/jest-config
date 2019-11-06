@@ -49,7 +49,8 @@ This packages comes with extra addons that further tweak the base Jest configura
 
 | Addon | Description |
 | :---: | --- |
-| [withWeb](addons/with-web/) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy) |
+| [withWeb](addons/with-web/) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy). |
+| [withRTL](addons/with-rtl/) | Adds setup for projects using [React Testing Library](https://github.com/testing-library/react-testing-library). |
 
 To use addons, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose`:
 
