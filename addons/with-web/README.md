@@ -2,6 +2,8 @@
 
 An addon for [`jest-config`](https://www.github.com/moxystudio/jest-config) for projects developed with [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy).
 
+This addon already includes the settings that come with the [withRTL](../with-rtl/) addon.
+
 ## Usage
 
 To use addons, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose` to include this addon:
