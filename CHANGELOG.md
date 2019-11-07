@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/moxystudio/jest-config/compare/v1.0.2...v1.1.0) (2019-11-07)
+
+
+### Features
+
+* implement rtl addon ([#3](https://github.com/moxystudio/jest-config/issues/3)) ([3d73965](https://github.com/moxystudio/jest-config/commit/3d739657ec957d5c3e025474aadd70a86ad4d2ee))
+
+
+### Bug Fixes
+
+* add missing babel-jest dependency ([db1c38e](https://github.com/moxystudio/jest-config/commit/db1c38efb7ae2ec5297182f02b684e29d37dc690))
+
 ### [1.0.2](https://github.com/moxystudio/jest-config/compare/v1.0.1...v1.0.2) (2019-11-05)
 
 
