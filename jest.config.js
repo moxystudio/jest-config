@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./base-config')();
+module.exports = require('./lib').baseConfig();

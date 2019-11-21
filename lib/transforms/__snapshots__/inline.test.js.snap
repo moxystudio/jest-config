@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return inline content of file 1`] = `
+"\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+exports.default = void 0;
+const contents = \\"this is a file!\\";
+var _default = contents;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImlubGluZS10ZXN0LWZpbGUudHh0Il0sIm5hbWVzIjpbImNvbnRlbnRzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFDQSxNQUFNQSxRQUFRLEdBQUcsaUJBQWpCO2VBRWVBLFEiLCJzb3VyY2VzQ29udGVudCI6WyJcbmNvbnN0IGNvbnRlbnRzID0gXCJ0aGlzIGlzIGEgZmlsZSFcIjtcblxuZXhwb3J0IGRlZmF1bHQgY29udGVudHM7XG4iXX0="
+`;
