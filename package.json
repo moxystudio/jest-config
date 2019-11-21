@@ -2,7 +2,7 @@
   "name": "@moxy/jest-config",
   "version": "1.1.0",
   "description": "MOXY Jest configuration to be used across several JavaScript projects.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/moxystudio/jest-config"
@@ -15,9 +15,9 @@
     "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "files": [
-    "addons/**",
-    "composer.js",
-    "base-config.js"
+    "lib",
+    "!**/*.test.js",
+    "!**/__snapshots__"
   ],
   "keywords": [
     "jest-config",
@@ -29,6 +29,7 @@
   "author": "João Silva <joao.silva@moxy.studio>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-env": "^7.7.1",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "eslint": "^6.5.1",
@@ -47,7 +48,6 @@
     "babel-jest": "^24.9.0",
     "ci-info": "^2.0.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest-file": "^1.0.0",
     "jest-serializer-path": "^0.1.15",
     "mime": "^2.4.4"
   }

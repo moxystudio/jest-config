@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return string containing data-url 1`] = `
+"\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+exports.default = void 0;
+const dataUrl = \\"data:text/plain;base64,dGhpcyBpcyBhIHN0YW5kYXJkIHRleHQgZmlsZSE=\\";
+var _default = dataUrl;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRhdGF1cmwtdGVzdC1maWxlLnR4dCJdLCJuYW1lcyI6WyJkYXRhVXJsIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFDQSxNQUFNQSxPQUFPLEdBQUcsaUVBQWhCO2VBRWVBLE8iLCJzb3VyY2VzQ29udGVudCI6WyJcbmNvbnN0IGRhdGFVcmwgPSBcImRhdGE6dGV4dC9wbGFpbjtiYXNlNjQsZEdocGN5QnBjeUJoSUhOMFlXNWtZWEprSUhSbGVIUWdabWxzWlNFPVwiO1xuXG5leHBvcnQgZGVmYXVsdCBkYXRhVXJsO1xuIl19"
+`;
