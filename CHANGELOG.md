@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/moxystudio/jest-config/compare/v1.1.0...v1.1.1) (2019-11-21)
+
+
+### Bug Fixes
+
+* transformers not generating interop code ([#5](https://github.com/moxystudio/jest-config/issues/5)) ([7047b45](https://github.com/moxystudio/jest-config/commit/7047b45847d2a3dd85b3561dcd2ab9070c58e2a3))
+
 ## [1.1.0](https://github.com/moxystudio/jest-config/compare/v1.0.2...v1.1.0) (2019-11-07)
 
 
