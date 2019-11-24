@@ -29,7 +29,7 @@ $ npm install --save-dev @moxy/jest-config
 Create `jest.config.js` at the root of your project:
 
 ```js
-const { baseConfig } = require('@moxy/jest-config')
+const { baseConfig } = require('@moxy/jest-config');
 
 module.exports = baseConfig();
 ```
