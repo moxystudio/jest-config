@@ -6,7 +6,7 @@
 [downloads-image]:https://img.shields.io/npm/dm/@moxy/jest-config.svg
 [npm-image]:https://img.shields.io/npm/v/@moxy/jest-config.svg
 [travis-url]:https://travis-ci.org/moxystudio/jest-config
-[travis-image]:http://img.shields.io/travis/moxystudio/jest-config/master.svg
+[travis-image]:https://img.shields.io/travis/moxystudio/jest-config/master.svg
 [codecov-url]:https://codecov.io/gh/moxystudio/jest-config
 [codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/jest-config/master.svg
 [david-dm-url]:https://david-dm.org/moxystudio/jest-config
