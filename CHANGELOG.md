@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/moxystudio/jest-config/compare/v1.1.1...v1.2.0) (2019-12-17)
+
+
+### Features
+
+* add api to collect coverage from in the web addon ([923150f](https://github.com/moxystudio/jest-config/commit/923150f2395c16bc430886ea23b56c1751b238e6))
+
 ### [1.1.1](https://github.com/moxystudio/jest-config/compare/v1.1.0...v1.1.1) (2019-11-21)
 
 
