@@ -15,7 +15,6 @@ Object {
   "testPathIgnorePatterns": Array [
     "/node_modules/",
     "/docusaurus/",
-    Array [],
   ],
   "transform": Object {
     "/.data-url/.": "<PROJECT_ROOT>/lib/transforms/data-url.js",
