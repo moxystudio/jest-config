@@ -12,6 +12,11 @@ Object {
   "setupFilesAfterEnv": Array [
     "@testing-library/jest-dom/extend-expect",
   ],
+  "testPathIgnorePatterns": Array [
+    "/node_modules/",
+    "/docusaurus/",
+    Array [],
+  ],
   "transform": Object {
     "/.data-url/.": "<PROJECT_ROOT>/lib/transforms/data-url.js",
     "/.inline/.": "<PROJECT_ROOT>/lib/transforms/inline.js",
