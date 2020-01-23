@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/moxystudio/jest-config/compare/v1.3.0...v1.4.0) (2020-01-23)
+
+
+### Features
+
+* ignore docusaurus in the web addon ([008d17f](https://github.com/moxystudio/jest-config/commit/008d17fbdda27dd2d1aa64a2e81024a217ffee0a))
+
 ## [1.3.0](https://github.com/moxystudio/jest-config/compare/v1.2.0...v1.3.0) (2020-01-22)
 
 
