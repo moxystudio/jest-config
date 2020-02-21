@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "globals": Object {
+    "__MOXY_JEST_CONFIG_ENZYME_ADAPTER__": "enzyme-adapter-react-16",
+  },
+  "setupFilesAfterEnv": Array [
+    "<PROJECT_ROOT>/lib/addons/with-enzyme/setup.js",
+    "<PROJECT_ROOT>/node_modules/jest-enzyme/lib/index.js",
+  ],
+}
+`;
