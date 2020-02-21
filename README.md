@@ -23,7 +23,6 @@ MOXY's Jest configuration to be used across several JavaScript projects.
 $ npm install --save-dev @moxy/jest-config
 ```
 
-
 ## Usage
 
 Create `jest.config.js` at the root of your project:
@@ -51,6 +50,7 @@ This packages comes with extra addons that further tweak the base Jest configura
 | :---: | --- |
 | [withWeb](lib/addons/with-web/) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy). |
 | [withRTL](lib/addons/with-rtl/) | Adds setup for projects using [React Testing Library](https://github.com/testing-library/react-testing-library). |
+| [withEnzyme](lib/addons/with-enzyme/) | Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme). |
 
 To use addons, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose`:
 
@@ -93,7 +93,6 @@ myConfig.testPathIgnorePatterns = ['/.*.data.js$/'];
 module.exports = myConfig;
 ```
 
-
 ## Tests
 
 Any parameter passed to the `test` command is passed down to Jest.
@@ -102,7 +101,6 @@ Any parameter passed to the `test` command is passed down to Jest.
 $ npm t
 $ npm t -- --watch  # To run watch mode
 ```
-
 
 ## License
 

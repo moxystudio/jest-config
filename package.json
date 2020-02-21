@@ -47,7 +47,9 @@
     "@testing-library/jest-dom": "^5.0.0",
     "babel-jest": "^25.1.0",
     "ci-info": "^2.0.0",
+    "enzyme": "^3.11.0",
     "identity-obj-proxy": "^3.0.0",
+    "jest-enzyme": "^7.1.2",
     "jest-serializer-path": "^0.1.15",
     "mime": "^2.4.4"
   }

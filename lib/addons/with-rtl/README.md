@@ -16,5 +16,4 @@ module.exports = compose([baseConfig, withRTL]);
 
 ### What's included in `withRTL`?
 
-This addon adds configurations to our base configuration to help develop projects using React Testing Library](https://github.com/testing-library/react-testing-library):
-- **Extended expect:** Using [`jest-dom`](https://github.com/testing-library/jest-dom) to make DOM assertions easier and clearer.
+- **Extended matchers:** Make DOM assertions easier and clearer by using [jest-dom](https://github.com/testing-library/jest-dom).

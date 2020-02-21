@@ -9,9 +9,6 @@ Object {
   "coveragePathIgnorePatterns": Array [
     ".*/.data/.js",
   ],
-  "setupFilesAfterEnv": Array [
-    "@testing-library/jest-dom/extend-expect",
-  ],
   "testPathIgnorePatterns": Array [
     "/node_modules/",
     "/docusaurus/",
