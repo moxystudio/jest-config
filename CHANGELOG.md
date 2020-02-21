@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/moxystudio/jest-config/compare/v1.4.1...v2.0.0) (2020-02-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* withWeb addon no longer comes with RTL by default
+
+### Features
+
+* add support for enzyme ([#8](https://github.com/moxystudio/jest-config/issues/8)) ([ec260d2](https://github.com/moxystudio/jest-config/commit/ec260d2ba39afebaf8d5ba4d0086081500edbeb4))
+
 ### [1.4.1](https://github.com/moxystudio/jest-config/compare/v1.4.0...v1.4.1) (2020-01-23)
 
 
