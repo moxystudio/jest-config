@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/moxystudio/jest-config/compare/v2.0.0...v2.0.1) (2020-03-10)
+
+
+### Bug Fixes
+
+* remove peer dependency warning about react ([2aef3a0](https://github.com/moxystudio/jest-config/commit/2aef3a0876fb9a3a5c8abd5f2b2b108d6a53dbb5))
+
 ## [2.0.0](https://github.com/moxystudio/jest-config/compare/v1.4.1...v2.0.0) (2020-02-21)
 
 
