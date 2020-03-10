@@ -14,6 +14,6 @@ const { compose, baseConfig, withRTL } = require('@moxy/jest-config');
 module.exports = compose([baseConfig, withRTL]);
 ```
 
-### What's included in `withRTL`?
+## What's included in `withRTL`?
 
 - **Extended matchers:** Make DOM assertions easier and clearer by using [jest-dom](https://github.com/testing-library/jest-dom).

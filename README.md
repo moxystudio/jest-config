@@ -47,7 +47,7 @@ Our `baseConfig` has project agnostic configurations, meant to help any project 
 This packages comes with extra addons that further tweak the base Jest configuration to cover the needs of common situations. Here's a list of all addons we offer so far:
 
 | Addon | Description |
-| :---: | --- |
+| ----- | ----------- |
 | [withWeb](lib/addons/with-web/) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy). |
 | [withRTL](lib/addons/with-rtl/) | Adds setup for projects using [React Testing Library](https://github.com/testing-library/react-testing-library). |
 | [withEnzyme](lib/addons/with-enzyme/) | Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme). |

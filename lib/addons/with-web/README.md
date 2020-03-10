@@ -12,7 +12,7 @@ const { compose, baseConfig, withWeb } = require('@moxy/jest-config');
 module.exports = compose([baseConfig, withWeb]);
 ```
 
-### What's included in `withWeb`?
+## What's included in `withWeb`?
 
 This addon adds configurations to our base configuration to help develop projects using [next-with-moxy](https://www.github.com/moxystudio/next-with-moxy):
 

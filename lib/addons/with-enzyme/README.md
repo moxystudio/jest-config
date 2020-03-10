@@ -17,7 +17,7 @@ module.exports = compose([
 
 ⚠️ Note that you **must install the Enzyme adapter** yourself and pass it to `withEnzyme`.
 
-### What's included in `withEnzyme`?
+## What's included in `withEnzyme`?
 
 - **Automatic adapter setup**: Setups the enzyme adapter automatically based on the desired one.
 - **Wrapper snapshotting**: Ability to snapshot Enzyme wrappers by using [enzyme-to-json](https://www.npmjs.com/package/enzyme-to-json).
