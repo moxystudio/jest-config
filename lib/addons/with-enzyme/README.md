@@ -21,4 +21,4 @@ module.exports = compose([
 
 - **Automatic adapter setup**: Setups the enzyme adapter automatically based on the desired one.
 - **Wrapper snapshotting**: Ability to snapshot Enzyme wrappers by using [enzyme-to-json](https://www.npmjs.com/package/enzyme-to-json).
-- **Extended matchers**: Make DOM assertions easier and clearer by using [jest-enzyme](https://github.com/FormidableLabs/enzyme-matchers/tree/master/packages/jest-enzyme).
+- **Extended matchers**: Make DOM assertions easier and clearer by using `jest-enzyme` [matchers](https://github.com/FormidableLabs/enzyme-matchers/tree/master/packages/jest-enzyme#assertions).
