@@ -2,7 +2,24 @@
 
 exports[`should match snapshot 1`] = `
 Object {
+  "automock": false,
+  "bail": 0,
+  "browser": false,
+  "cache": true,
+  "cacheDirectory": "<TEMP_DIR>/jest_1",
+  "changedFilesWithAncestor": false,
+  "clearMocks": false,
   "collectCoverage": false,
+  "coveragePathIgnorePatterns": Array [
+    "/node_modules/",
+  ],
+  "coverageProvider": "babel",
+  "coverageReporters": Array [
+    "json",
+    "text",
+    "lcov",
+    "clover",
+  ],
   "coverageThreshold": Object {
     "global": Object {
       "branches": 80,
@@ -11,12 +28,66 @@ Object {
       "statements": -10,
     },
   },
+  "errorOnDeprecated": false,
+  "expand": false,
+  "forceCoverageMatch": Array [],
+  "globals": Object {},
+  "haste": Object {
+    "computeSha1": false,
+    "providesModuleNodeModules": Array [],
+    "throwOnModuleCollision": false,
+  },
+  "maxConcurrency": 5,
+  "maxWorkers": "50%",
+  "moduleDirectories": Array [
+    "node_modules",
+  ],
+  "moduleFileExtensions": Array [
+    "js",
+    "json",
+    "jsx",
+    "ts",
+    "tsx",
+    "node",
+  ],
   "moduleNameMapper": Object {
     "/.css$": "<PROJECT_ROOT>/node_modules/identity-obj-proxy/src/index.js",
   },
+  "modulePathIgnorePatterns": Array [],
+  "noStackTrace": false,
+  "notify": false,
+  "notifyMode": "failure-change",
+  "prettierPath": "prettier",
+  "resetMocks": false,
+  "resetModules": false,
+  "restoreMocks": false,
+  "roots": Array [
+    "<rootDir>",
+  ],
+  "runTestsByPath": false,
+  "runner": "jest-runner",
+  "setupFiles": Array [],
+  "setupFilesAfterEnv": Array [],
+  "skipFilter": false,
   "snapshotSerializers": Array [
     "<PROJECT_ROOT>/node_modules/jest-serializer-path/lib/index.js",
   ],
+  "testEnvironment": "jest-environment-jsdom",
+  "testEnvironmentOptions": Object {},
+  "testFailureExitCode": 1,
+  "testLocationInResults": false,
+  "testMatch": Array [
+    "**/__tests__/**/*.[jt]s?(x)",
+    "**/?(*.)+(spec|test).[tj]s?(x)",
+  ],
+  "testPathIgnorePatterns": Array [
+    "/node_modules/",
+  ],
+  "testRegex": Array [],
+  "testRunner": "jasmine2",
+  "testSequencer": "@jest/test-sequencer",
+  "testURL": "http://localhost",
+  "timers": "real",
   "transform": Object {
     "/.(eot|ttf|woff|woff2|otf)$": "<PROJECT_ROOT>/lib/transforms/file.js",
     "/.(mp3|flac|wav|aac|ogg|oga|mp4|m4a|webm|ogv)$": "<PROJECT_ROOT>/lib/transforms/file.js",
@@ -25,5 +96,12 @@ Object {
     "/.(svg)$": "<PROJECT_ROOT>/lib/transforms/file.js",
     "/.js$": "<PROJECT_ROOT>/node_modules/babel-jest/build/index.js",
   },
+  "transformIgnorePatterns": Array [
+    "/node_modules/",
+  ],
+  "useStderr": false,
+  "watch": false,
+  "watchPathIgnorePatterns": Array [],
+  "watchman": true,
 }
 `;

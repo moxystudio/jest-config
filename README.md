@@ -35,12 +35,12 @@ module.exports = baseConfig();
 
 ### What's included in `baseConfig`?
 
-Our `baseConfig` has project agnostic configurations, meant to help any project regardless of their purpose, including;
+`baseConfig` is the base point of this configuration. It includes all defaults offered by [`jest-config`](https://jestjs.io/docs/en/configuration#defaults), and has project agnostic configurations, meant to help any project regardless of their purpose, including;
 - **Transform**: Preprocessors for `.js` files as well as other common filetypes.
 - **Module name mapping:** For `.css` files, to correctly mock `className` lookups when using CSS Modules.
 - **Coverage**: By default, coverage is only verified in CI. This feature is supported by [`ci-info`](https://github.com/watson/ci-info), which you can check for information about supported CI services.
 - **Coverage thresholds:** For a good balance  between strict but workable thresholds.
-- **Snapshot serializing:** To remove absolute paths from your snapshots, reducing conflicts with in CI.
+- **Snapshot serializing:** To remove absolute paths from your snapshots, reducing conflicts in CI.
 
 ## Addons
 

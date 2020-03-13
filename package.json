@@ -51,6 +51,7 @@
     "enzyme-matchers": "^7.1.2",
     "enzyme-to-json": "^3.4.4",
     "identity-obj-proxy": "^3.0.0",
+    "jest-config": "^25.1.0",
     "jest-serializer-path": "^0.1.15",
     "mime": "^2.4.4"
   }
