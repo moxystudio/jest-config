@@ -4,8 +4,10 @@ exports[`should match snapshot 1`] = `
 Object {
   "globals": Object {
     "__MOXY_JEST_CONFIG_ENZYME_ADAPTER__": "enzyme-adapter-react-16",
+    "foo": "bar",
   },
   "setupFilesAfterEnv": Array [
+    "foo",
     "<PROJECT_ROOT>/lib/addons/with-enzyme/setup-adapter.js",
     "<PROJECT_ROOT>/lib/addons/with-enzyme/setup.js",
   ],
