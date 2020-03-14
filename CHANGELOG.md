@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/moxystudio/jest-config/compare/v2.0.2...v2.1.0) (2020-03-14)
+
+
+### Features
+
+* add jestConfig to baseConfig ([#10](https://github.com/moxystudio/jest-config/issues/10)) ([b86a4ad](https://github.com/moxystudio/jest-config/commit/b86a4ad65531e473a3b07b6fe25d346781746c15))
+
 ### [2.0.2](https://github.com/moxystudio/jest-config/compare/v2.0.1...v2.0.2) (2020-03-10)
 
 ### [2.0.1](https://github.com/moxystudio/jest-config/compare/v2.0.0...v2.0.1) (2020-03-10)
