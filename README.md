@@ -66,13 +66,13 @@ If you want to make your own addon, you can! It just needs to have the following
 const { compose, baseConfig } = require('@moxy/jest-config');
 
 // Receives previous configuration
-const withAddon = (configuration) => {
+const withAddon = (config) => {
     // Add your options to configuration
     // For example, do not test '.data.js' files
-    configuration.testPathIgnorePatterns = ['/.*.data.js$/'];
+    config.testPathIgnorePatterns = ['/.*.data.js$/'];
 
     // Returns configuration with added options
-    return configuration;
+    return config;
 };
 
 module.exports = compose([baseConfig, withAddon]);
