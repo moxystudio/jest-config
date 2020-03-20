@@ -44,17 +44,17 @@ module.exports = baseConfig();
 
 ℹ️ Test files must be named test.js or end with .test.js, even if they are inside __tests__ or any other folder.
 
-## Addons
+## Enhancers
 
-This packages comes with extra addons that further tweak the base Jest configuration to cover the needs of common situations. Here's a list of all addons we offer so far:
+This packages comes with extra enhancers that further tweak the base Jest configuration to cover the needs of common situations. Here's a list of all enhancers we offer so far:
 
 | Addon | Description |
 | ----- | ----------- |
-| [withWeb](lib/addons/with-web/) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy). |
-| [withRTL](lib/addons/with-rtl/) | Adds setup for projects using [React Testing Library](https://github.com/testing-library/react-testing-library). |
-| [withEnzyme](lib/addons/with-enzyme/) | Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme). |
+| [withWeb](lib/enhancers/with-web/) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy). |
+| [withRTL](lib/enhancers/with-rtl/) | Adds setup for projects using [React Testing Library](https://github.com/testing-library/react-testing-library). |
+| [withEnzyme](lib/enhancers/with-enzyme/) | Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme). |
 
-To use addons, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose`:
+To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose`:
 
 ```js
 const { compose, baseConfig, withWeb } = require('@moxy/jest-config');
@@ -62,34 +62,33 @@ const { compose, baseConfig, withWeb } = require('@moxy/jest-config');
 module.exports = compose([baseConfig, withWeb]);
 ```
 
-If you want to make your own addon, you can! It just needs to have the following structure:
+You may use `compose` to add your own inline enhancer:
 
 ```js
 const { compose, baseConfig } = require('@moxy/jest-config');
 
-// Receives previous configuration
-const withAddon = (config) => {
-    // Add your options to configuration
-    // For example, do not test '.data.js' files
-    config.testPathIgnorePatterns = ['/.*.data.js$/'];
+module.exports = compose([
+    baseConfig,
+    (config) => {
+        // Do not test `.data.js` files
+        config.testPathIgnorePatterns = ['/.*.data.js$/'];
 
-    // Returns configuration with added options
-    return config;
-};
-
-module.exports = compose([baseConfig, withAddon]);
+        // Return config so that it's picked up by `compose`
+        return config;
+    },
+]);
 ```
 
-### Without addons
+### Without compose
 
-If you want to add your own options without using our addons or making your own, you may imperatively change the returned base config like so:
+If you want to modify the base config without using `compose`, you may change the config imperatively like so:
 
 ```js
 const { baseConfig } = require('@moxy/jest-config');
 
 const myConfig = baseConfig();
 
-// Do not test '.data.js' files
+// Do not test `.data.js` files
 myConfig.testPathIgnorePatterns = ['/.*.data.js$/'];
 
 module.exports = myConfig;

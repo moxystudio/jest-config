@@ -6,7 +6,7 @@ If you're already using [`withWeb`](../with-web/), you don't need to include thi
 
 ## Usage
 
-To use addons, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose` to include this addon:
+To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose` to include this addon:
 
 ```js
 const { compose, baseConfig, withRTL } = require('@moxy/jest-config');
