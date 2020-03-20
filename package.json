@@ -1,6 +1,6 @@
 {
   "name": "@moxy/jest-config",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "MOXY Jest configuration to be used across several JavaScript projects.",
   "main": "lib/index.js",
   "repository": {

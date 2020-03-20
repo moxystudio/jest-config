@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/moxystudio/jest-config/compare/v2.1.0...v3.0.0) (2020-03-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* no longer detect .spec.js files (#12)
+
+### Features
+
+* no longer detect .spec.js files ([#12](https://github.com/moxystudio/jest-config/issues/12)) ([379d462](https://github.com/moxystudio/jest-config/commit/379d4629a757792a64f1b427b7f773b5125bfcf7))
+
 ## [2.1.0](https://github.com/moxystudio/jest-config/compare/v2.0.2...v2.1.0) (2020-03-14)
 
 
