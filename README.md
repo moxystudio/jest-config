@@ -42,6 +42,8 @@ module.exports = baseConfig();
 - **Coverage thresholds:** For a good balance  between strict but workable thresholds.
 - **Snapshot serializing:** To remove absolute paths from your snapshots, reducing conflicts in CI.
 
+ℹ️ Test files must be named test.js or end with .test.js, even if they are inside __tests__ or any other folder.
+
 ## Addons
 
 This packages comes with extra addons that further tweak the base Jest configuration to cover the needs of common situations. Here's a list of all addons we offer so far:
