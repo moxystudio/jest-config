@@ -4,7 +4,7 @@ An addon for [`jest-config`](https://www.github.com/moxystudio/jest-config) for 
 
 ## Usage
 
-To use addons, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose` to include this addon:
+To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose` to include this addon:
 
 ```js
 const { compose, baseConfig, withEnzyme } = require('@moxy/jest-config');
