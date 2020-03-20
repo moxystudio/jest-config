@@ -77,7 +77,7 @@ Object {
   "testFailureExitCode": 1,
   "testLocationInResults": false,
   "testMatch": Array [
-    "**/?(*.)test.[jt]s?(x)",
+    "**/?(*.)test.[jt]s",
   ],
   "testPathIgnorePatterns": Array [
     "/node_modules/",
