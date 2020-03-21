@@ -4,7 +4,8 @@ exports[`should match snapshot 1`] = `
 Object {
   "setupFilesAfterEnv": Array [
     "foo",
-    "@testing-library/jest-dom/extend-expect",
+    "<PROJECT_ROOT>/node_modules/@testing-library/jest-dom/extend-expect.js",
   ],
+  "testEnvironment": "jsdom",
 }
 `;

@@ -1,20 +1,21 @@
 # withWeb
 
-An addon for [jest-config](https://www.github.com/moxystudio/jest-config) for projects developed with [next-with-moxy](https://www.github.com/moxystudio/next-with-moxy).
+An enhancer for web projects, typically end-projects that work in the browser.
+
+## What's included?
+
+- **Transform**: Allows importing common files used for the web, such as fonts, images and videos. It also maps files ending in `.data-url.<ext>` and `.inline.<ext>` into their base64 data URL and raw content respectively, a convention we are using in [next-with-moxy](https://www.github.com/moxystudio/next-with-moxy) and other Webpack based projects.
+- **Module name mapping:** Maps `.css` files to an identity object, to correctly mock `className` lookups when using CSS Modules.
 
 ## Usage
 
-To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose` to include this addon:
+To use this enhancer, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the base configuration!
 
 ```js
 const { compose, baseConfig, withWeb } = require('@moxy/jest-config');
 
-module.exports = compose([baseConfig, withWeb]);
+module.exports = compose(
+    baseConfig(),
+    withWeb(),
+);
 ```
-
-## What's included in `withWeb`?
-
-This addon adds configurations to our base configuration to help develop projects using [next-with-moxy](https://www.github.com/moxystudio/next-with-moxy):
-
-- **Transform:** Includes preprocessors for data-url file imports and inline file content imports. Note, we're using [next-with-moxy](https://www.github.com/moxystudio/next-with-moxy) naming conventions to know which files to process with each preprocessor.
-- **Coverage collection and ignore patterns:** Conforming to the folder and naming conventions of [next-with-moxy](https://www.github.com/moxystudio/next-with-moxy).
