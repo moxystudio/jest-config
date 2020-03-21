@@ -1,6 +1,6 @@
 # withReactNative
 
-An addon for [`jest-config`](https://www.github.com/moxystudio/jest-config) for projects tested with [ReactNative](https://www.npmjs.com/package/react-native).
+An addon for [`jest-config`](https://www.github.com/moxystudio/jest-config) for projects built with [ReactNative](https://www.npmjs.com/package/react-native).
 
 ⚠️ This enhancer requires you to have [`react-native`](https://www.npmjs.com/package/react-native) installed on your project.
 
