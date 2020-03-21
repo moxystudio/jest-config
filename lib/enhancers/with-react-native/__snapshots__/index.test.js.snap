@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "haste": Object {
+    "defaultPlatform": "ios",
+    "platforms": Array [
+      "android",
+      "ios",
+      "native",
+    ],
+  },
+  "setupFiles": Array [
+    "foo",
+    "./jest/setup.js",
+  ],
+  "testEnvironment": "node",
+}
+`;

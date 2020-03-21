@@ -53,6 +53,7 @@ This packages comes with extra enhancers that further tweak the base Jest config
 | [withWeb](lib/enhancers/with-web/) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy). |
 | [withRTL](lib/enhancers/with-rtl/) | Adds setup for projects using [React Testing Library](https://github.com/testing-library/react-testing-library). |
 | [withEnzyme](lib/enhancers/with-enzyme/) | Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme). |
+| [withReactNative](lib/enhancers/with-react-native/) | Adds setup for projects using [React-Native](https://reactnative.dev/). |
 
 To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose`:
 
@@ -70,8 +71,7 @@ const { compose, baseConfig } = require('@moxy/jest-config');
 module.exports = compose([
     baseConfig,
     (config) => {
-        // Do not test `.data.js` files
-        config.testPathIgnorePatterns = ['/.*.data.js$/'];
+        config.testEnvironment = 'node';
 
         // Return config so that it's picked up by `compose`
         return config;
@@ -86,12 +86,11 @@ If you want to modify the base config without using `compose`, you may change th
 ```js
 const { baseConfig } = require('@moxy/jest-config');
 
-const myConfig = baseConfig();
+const config = baseConfig();
 
-// Do not test `.data.js` files
-myConfig.testPathIgnorePatterns = ['/.*.data.js$/'];
+config.testEnvironment = 'node';
 
-module.exports = myConfig;
+module.exports = config;
 ```
 
 ## Tests

@@ -1,6 +1,6 @@
 # withEnzyme
 
-An addon for [`jest-config`](https://www.github.com/moxystudio/jest-config) for projects developed with [Enzyme](https://github.com/airbnb/enzyme).
+An addon for [`jest-config`](https://www.github.com/moxystudio/jest-config) for projects tested with [Enzyme](https://github.com/airbnb/enzyme).
 
 ## Usage
 
