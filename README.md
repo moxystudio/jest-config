@@ -16,12 +16,35 @@
 
 MOXY's Jest configuration to be used across several JavaScript projects.
 
-
 ## Installation
 
 ```sh
 $ npm install --save-dev @moxy/jest-config
 ```
+
+## How it works
+
+This package contains a **base** configuration and a set of **enhancers**. You may combine them to configure Jest for different types of projects.
+
+### Base config
+
+`baseConfig` is the base point of this configuration. It includes all defaults offered by [`jest-config`](https://jestjs.io/docs/en/configuration#defaults), and has project agnostic configurations, meant to help any project regardless of their purpose, including:
+
+- **Test match**: Tweaks `testMatch` so that only files named `test.js` or files ending with `.test.js` are considered test files, even if they are inside `__tests__` or any other folder.
+- **Test path ignore patterns**: Tweaks `testPathIgnorePatterns` to ignore common folders, such as `docusaurus`.
+- **Transform**: Enables Babel so that [`jest.mock()`](https://jestjs.io/docs/en/jest-object#jestmockmodulename-factory-options) and similar functions are automatically hoisted to the top. If your project uses Babel, its config will be read and used to transpile code.
+- **Coverage**: Enables coverage for CI, a feature supported by [`ci-info`](https://github.com/watson/ci-info), which you can check for information about supported CI services.
+- **Coverage thresholds**: For a good balance between strict but workable thresholds.
+- **Snapshot serializing**: To remove absolute paths from your snapshots, reducing conflicts in CI.
+
+### Enhancers
+
+There are several **enhancer** packages, which are intended to be used in conjunction with the **base** configuration:
+
+- [`withWeb`](lib/enhancers/web/) - Adds setup for Web projects.
+- [`withReactNative`](lib/enhancers/react-native/) - Adds setup for [React Native](https://reactnative.dev/) projects.
+- [`withRTL`](lib/enhancers/testing-library/#withrtl) - Adds setup for projects using [Testing Library](https://testing-library.com).
+- [`withEnzymeWeb`](lib/enhancers/enzyme/#withenzymeweb) & [`withEnzymeReactNative`](lib/enhancers/enzyme/#withenzymereactnative) - Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme).
 
 ## Usage
 
@@ -33,50 +56,44 @@ const { baseConfig } = require('@moxy/jest-config');
 module.exports = baseConfig();
 ```
 
-### What's included in `baseConfig`?
-
-`baseConfig` is the base point of this configuration. It includes all defaults offered by [`jest-config`](https://jestjs.io/docs/en/configuration#defaults), and has project agnostic configurations, meant to help any project regardless of their purpose, including;
-- **Transform**: Preprocessors for `.js` files as well as other common filetypes.
-- **Module name mapping:** For `.css` files, to correctly mock `className` lookups when using CSS Modules.
-- **Coverage**: By default, coverage is only verified in CI. This feature is supported by [`ci-info`](https://github.com/watson/ci-info), which you can check for information about supported CI services.
-- **Coverage thresholds:** For a good balance  between strict but workable thresholds.
-- **Snapshot serializing:** To remove absolute paths from your snapshots, reducing conflicts in CI.
-
-ℹ️ Test files must be named test.js or end with .test.js, even if they are inside __tests__ or any other folder.
-
-## Enhancers
-
-This packages comes with extra enhancers that further tweak the base Jest configuration to cover the needs of common situations. Here's a list of all enhancers we offer so far:
-
-| Addon | Description |
-| ----- | ----------- |
-| [withWeb](lib/enhancers/with-web/) | Adds setup and ignore patterns we use in [`next-with-moxy`](https://www.github.com/moxystudio/next-with-moxy). |
-| [withRTL](lib/enhancers/with-rtl/) | Adds setup for projects using [React Testing Library](https://github.com/testing-library/react-testing-library). |
-| [withEnzyme](lib/enhancers/with-enzyme/) | Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme). |
-
-To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the default configuration, `baseConfig`! Here's an example of using `compose`:
+The `baseConfig` function accepts a optional parameter that allows to specify the Jest environment, which can be `jsdom` (default) or `node`. As an example, for Node.js projects you would use like so:
 
 ```js
-const { compose, baseConfig, withWeb } = require('@moxy/jest-config');
+const { baseConfig } = require('@moxy/jest-config');
 
-module.exports = compose([baseConfig, withWeb]);
+module.exports = baseConfig('node');
 ```
 
-You may use `compose` to add your own inline enhancer:
+### Composing enhancers
+
+To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the base configuration! Here's an example of using `compose`:
+
+```js
+const { compose, baseConfig, withWeb, withRTL } = require('@moxy/jest-config');
+
+module.exports = compose(
+    baseConfig(),
+    withWeb(),
+    withRTL(),
+);
+```
+
+You may also use `compose` to add your own inline enhancer:
 
 ```js
 const { compose, baseConfig } = require('@moxy/jest-config');
 
-module.exports = compose([
-    baseConfig,
-    (config) => {
+module.exports = compose(
+    baseConfig(),
+    (config) => ({
+        ...config,
         // Do not test `.data.js` files
-        config.testPathIgnorePatterns = ['/.*.data.js$/'];
-
-        // Return config so that it's picked up by `compose`
-        return config;
-    },
-]);
+        testPathIgnorePatterns: [
+            ...config.pathIgnorePatterns,
+            '/.*.data.js$/'
+        ];
+    }),
+);
 ```
 
 ### Without compose
@@ -86,12 +103,15 @@ If you want to modify the base config without using `compose`, you may change th
 ```js
 const { baseConfig } = require('@moxy/jest-config');
 
-const myConfig = baseConfig();
+const config = baseConfig();
 
 // Do not test `.data.js` files
-myConfig.testPathIgnorePatterns = ['/.*.data.js$/'];
+config.testPathIgnorePatterns = [
+    ...config.testPathIgnorePatterns,
+    '/.*.data.js$/'
+];
 
-module.exports = myConfig;
+module.exports = config;
 ```
 
 ## Tests

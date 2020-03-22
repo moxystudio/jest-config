@@ -50,9 +50,7 @@ Object {
     "tsx",
     "node",
   ],
-  "moduleNameMapper": Object {
-    "/.css$": "<PROJECT_ROOT>/node_modules/identity-obj-proxy/src/index.js",
-  },
+  "moduleNameMapper": Object {},
   "modulePathIgnorePatterns": Array [],
   "noStackTrace": false,
   "notify": false,
@@ -72,7 +70,7 @@ Object {
   "snapshotSerializers": Array [
     "<PROJECT_ROOT>/node_modules/jest-serializer-path/lib/index.js",
   ],
-  "testEnvironment": "jest-environment-jsdom",
+  "testEnvironment": "jsdom",
   "testEnvironmentOptions": Object {},
   "testFailureExitCode": 1,
   "testLocationInResults": false,
@@ -81,6 +79,7 @@ Object {
   ],
   "testPathIgnorePatterns": Array [
     "/node_modules/",
+    "/docusaurus/",
   ],
   "testRegex": Array [],
   "testRunner": "jasmine2",
@@ -88,12 +87,7 @@ Object {
   "testURL": "http://localhost",
   "timers": "real",
   "transform": Object {
-    "/.(eot|ttf|woff|woff2|otf)$": "<PROJECT_ROOT>/lib/transforms/file.js",
-    "/.(mp3|flac|wav|aac|ogg|oga|mp4|m4a|webm|ogv)$": "<PROJECT_ROOT>/lib/transforms/file.js",
-    "/.(obj|mtl|fnt|glb)$": "<PROJECT_ROOT>/lib/transforms/file.js",
-    "/.(png|jpg|jpeg|gif|webp|ico)$": "<PROJECT_ROOT>/lib/transforms/file.js",
-    "/.(svg)$": "<PROJECT_ROOT>/lib/transforms/file.js",
-    "/.js$": "<PROJECT_ROOT>/node_modules/babel-jest/build/index.js",
+    "/.[jt]s$": "<PROJECT_ROOT>/node_modules/babel-jest/build/index.js",
   },
   "transformIgnorePatterns": Array [
     "/node_modules/",

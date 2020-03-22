@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withEnzymeReactNative should match snapshot 1`] = `
+Object {
+  "globals": Object {
+    "__MOXY_JEST_CONFIG_ENZYME_ADAPTER__": "enzyme-adapter-react-16",
+    "foo": "bar",
+  },
+  "setupFilesAfterEnv": Array [
+    "foo",
+    "<PROJECT_ROOT>/lib/enhancers/enzyme/setup.js",
+    "<PROJECT_ROOT>/lib/enhancers/enzyme/setup-react-native.js",
+  ],
+  "testEnvironment": "jsdom",
+}
+`;
+
+exports[`withEnzymeWeb should match snapshot 1`] = `
+Object {
+  "globals": Object {
+    "__MOXY_JEST_CONFIG_ENZYME_ADAPTER__": "enzyme-adapter-react-16",
+    "foo": "bar",
+  },
+  "setupFilesAfterEnv": Array [
+    "foo",
+    "<PROJECT_ROOT>/lib/enhancers/enzyme/setup.js",
+    "<PROJECT_ROOT>/lib/enhancers/enzyme/setup-web.js",
+  ],
+  "testEnvironment": "jsdom",
+}
+`;

@@ -28,6 +28,24 @@
   ],
   "author": "João Silva <joao.silva@moxy.studio>",
   "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.0.0",
+    "@testing-library/jest-dom": "^5.0.0",
+    "@testing-library/jest-native": "^3.1.0",
+    "babel-jest": "^25.1.0",
+    "ci-info": "^2.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-matchers": "^7.1.2",
+    "enzyme-to-json": "^3.4.4",
+    "get-caller-file": "^2.0.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-config": "^25.1.0",
+    "jest-serializer-path": "^0.1.15",
+    "mime": "^2.4.4"
+  },
+  "peerDependencies": {
+    "jest": ">= 24.9.0 <= 25"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.7.1",
     "@commitlint/cli": "^8.2.0",
@@ -40,20 +58,5 @@
     "lint-staged": "^10.0.2",
     "standard-version": "^7.0.0",
     "tmp-sync": "^1.1.2"
-  },
-  "peerDependencies": {
-    "jest": ">= 24.9.0 <= 25"
-  },
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.0.0",
-    "babel-jest": "^25.1.0",
-    "ci-info": "^2.0.0",
-    "enzyme": "^3.11.0",
-    "enzyme-matchers": "^7.1.2",
-    "enzyme-to-json": "^3.4.4",
-    "identity-obj-proxy": "^3.0.0",
-    "jest-config": "^25.1.0",
-    "jest-serializer-path": "^0.1.15",
-    "mime": "^2.4.4"
   }
 }

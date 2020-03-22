@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "moduleNameMapper": Object {
+    "/.css$": "<PROJECT_ROOT>/node_modules/identity-obj-proxy/src/index.js",
+    "foz": "baz",
+  },
+  "testEnvironment": "jsdom",
+  "transform": Object {
+    "/.(eot|ttf|woff|woff2|otf)$": "<PROJECT_ROOT>/lib/transforms/file.js",
+    "/.(mp3|flac|wav|aac|ogg|oga|mp4|m4a|webm|ogv)$": "<PROJECT_ROOT>/lib/transforms/file.js",
+    "/.(obj|mtl|fnt|glb)$": "<PROJECT_ROOT>/lib/transforms/file.js",
+    "/.(png|jpg|jpeg|gif|webp|svg|ico|bmp)$": "<PROJECT_ROOT>/lib/transforms/file.js",
+    "/.data-url/.[^/.+?]$": "<PROJECT_ROOT>/lib/transforms/data-url.js",
+    "/.inline/.[^/.+?]$": "<PROJECT_ROOT>/lib/transforms/inline.js",
+    "foo": "bar",
+  },
+}
+`;
