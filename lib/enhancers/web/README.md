@@ -1,6 +1,6 @@
 # withWeb
 
-An enhancer for web projects, typically end-projects that work in the browser.
+An enhancer for Web projects, typically end-projects that work in the browser.
 
 ## What's included?
 

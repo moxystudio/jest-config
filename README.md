@@ -41,10 +41,10 @@ This package contains a **base** configuration and a set of **enhancers**. You m
 
 There are several **enhancer** packages, which are intended to be used in conjunction with the **base** configuration:
 
-- [`withRTL`](lib/enhancers/with-rtl/) - Adds setup for projects using [React Testing Library](https://github.com/testing-library/react-testing-library).
-- [`withEnzyme`](lib/enhancers/with-enzyme/) - Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme).
-- [`withWeb`](lib/enhancers/with-web/) - Adds setup for web projects.
-- [`withReactNative`](lib/enhancers/with-react-native/) - Adds setup for [React Native](https://reactnative.dev/) projects.
+- [`withWeb`](lib/enhancers/web/) - Adds setup for Web projects.
+- [`withReactNative`](lib/enhancers/react-native/) - Adds setup for [React Native](https://reactnative.dev/) projects.
+- [`withRTL`](lib/enhancers/testing-library/#withrtl) & [`withNTL`](lib/enhancers/testing-library/#withntl) - Adds setup for projects using [Testing Library](https://testing-library.com).
+- [`withEnzymeWeb`](lib/enhancers/enzyme/#withenzymeweb) & [`withEnzymeReactNative`](lib/enhancers/enzyme/#withenzymereactnative) - Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme).
 
 ## Usage
 

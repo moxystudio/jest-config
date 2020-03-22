@@ -31,6 +31,7 @@
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@testing-library/jest-dom": "^5.0.0",
+    "@testing-library/jest-native": "^3.1.0",
     "babel-jest": "^25.1.0",
     "ci-info": "^2.0.0",
     "enzyme": "^3.11.0",
