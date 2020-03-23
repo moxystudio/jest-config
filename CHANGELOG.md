@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/moxystudio/jest-config/compare/v4.0.0...v4.0.1) (2020-03-23)
+
+
+### Bug Fixes
+
+* remove unused dependency ([59b7d11](https://github.com/moxystudio/jest-config/commit/59b7d119023234271e9deba8e25d4d7bb945696c))
+
 ## [4.0.0](https://github.com/moxystudio/jest-config/compare/v3.0.0...v4.0.0) (2020-03-23)
 
 
