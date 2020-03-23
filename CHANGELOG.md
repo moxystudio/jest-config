@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/moxystudio/jest-config/compare/v3.0.0...v4.0.0) (2020-03-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* the base configuration no longer contains transforms nor mappings other than JavaScript files
+* baseConfig and enhancers are now factories
+* enhancers now validate if the test environment is correctly set
+* withEnzyme now has mandatory target argument
+* compose now accepts baseConfig as the first argument and enhancers are spread-ed after it
+
+### Features
+
+* add react-native enhancers ([#16](https://github.com/moxystudio/jest-config/issues/16)) ([df9d662](https://github.com/moxystudio/jest-config/commit/df9d662cae3c29aea0c548b82ab31c48c4ad8a4d))
+
+
+### Bug Fixes
+
+* fix testMatch pattern to not accept jsx ([#13](https://github.com/moxystudio/jest-config/issues/13)) ([55dc8b0](https://github.com/moxystudio/jest-config/commit/55dc8b0f80566fd8f5f7237229221e01d012bbbf))
+
 ## [3.0.0](https://github.com/moxystudio/jest-config/compare/v2.1.0...v3.0.0) (2020-03-20)
 
 
