@@ -13,7 +13,8 @@ Object {
   },
   "setupFiles": Array [
     "foo",
-    "./jest/setup.js",
+    "react-native/jest/setup.js",
+    "./setup.js",
   ],
   "testEnvironment": "jsdom",
   "transform": Object {
