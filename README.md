@@ -19,7 +19,7 @@ MOXY's Jest configuration to be used across several JavaScript projects.
 ## Installation
 
 ```sh
-$ npm install --save-dev @moxy/jest-config
+$ npm install --save-dev jest @moxy/jest-config
 ```
 
 ## How it works
