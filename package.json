@@ -16,6 +16,7 @@
   },
   "files": [
     "lib",
+    "environments",
     "!**/*.test.js",
     "!**/__snapshots__"
   ],

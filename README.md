@@ -64,6 +64,22 @@ const { baseConfig } = require('@moxy/jest-config');
 module.exports = baseConfig('node');
 ```
 
+Alternatively, you may pass a path to a custom environment. In fact, we offer the following custom environments:
+
+<details>
+  <summary><code>@moxy/jest-config/environments/node-single-context</code></summary>
+
+  Special node environment class for Jest which runs all scripts in the same context. This effectively disables the sandbox isolation to circumvent issues with Jest's [sandboxing](https://github.com/facebook/jest/issues/2549), which causes subtle bugs in specific situations, such as in code that relies in `instanceof` checks.
+
+  ```js
+  const { baseConfig } = require('@moxy/jest-config');
+
+  module.exports = baseConfig('@moxy/jest-config/environments/node-single-context');
+  ```
+
+  > ⚠️ Only activate this environment if you are having problems with the aforementioned issue, and before trying other workarounds.
+</details>
+
 ### Composing enhancers
 
 To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the base configuration! Here's an example of using `compose`:
