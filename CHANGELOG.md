@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/moxystudio/jest-config/compare/v4.0.1...v4.1.0) (2020-04-28)
+
+
+### Features
+
+* add node single context environment ([#20](https://github.com/moxystudio/jest-config/issues/20)) ([5d32005](https://github.com/moxystudio/jest-config/commit/5d3200554b1f0bf2b10d456864a9d578a09bcdd1))
+
+
+### Bug Fixes
+
+* add enzyme matchers to react native enhancer ([#19](https://github.com/moxystudio/jest-config/issues/19)) ([f2375f7](https://github.com/moxystudio/jest-config/commit/f2375f70058b57e84b83e2fbb5b98583719c2d21))
+* move animated mock to react native enhancer ([#18](https://github.com/moxystudio/jest-config/issues/18)) ([8798738](https://github.com/moxystudio/jest-config/commit/879873885d2846854be52a8ccb31253e6b68b7b2))
+
 ### [4.0.1](https://github.com/moxystudio/jest-config/compare/v4.0.0...v4.0.1) (2020-03-23)
 
 
