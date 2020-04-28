@@ -69,7 +69,7 @@ Alternatively, you may pass a path to a custom environment. In fact, we offer th
 <details>
   <summary><code>@moxy/jest-config/environments/node-single-context</code></summary>
 
-  Special node environment class for Jest which runs all scripts in the same context. This effectively disables the sandbox isolation to circumvent issues with Jest's [sandboxing](https://github.com/facebook/jest/issues/2549), which causes subtle bugs in specific situations, such as in code that relies in `instanceof` checks.
+  Special Node environment class for Jest which runs all scripts in the same context. This effectively disables the sandbox isolation to circumvent issues with Jest's [sandboxing](https://github.com/facebook/jest/issues/2549), which causes subtle bugs in specific situations, such as in code that relies in `instanceof` checks.
 
   ```js
   const { baseConfig } = require('@moxy/jest-config');
