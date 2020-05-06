@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/moxystudio/jest-config/compare/v4.1.0...v4.2.0) (2020-05-06)
+
+
+### Features
+
+* support jest v26 ([091332b](https://github.com/moxystudio/jest-config/commit/091332bbc4366c3f17a770f7530171753e6ccedc))
+
 ## [4.1.0](https://github.com/moxystudio/jest-config/compare/v4.0.1...v4.1.0) (2020-04-28)
 
 
