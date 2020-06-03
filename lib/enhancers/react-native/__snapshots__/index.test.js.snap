@@ -14,7 +14,7 @@ Object {
   "setupFiles": Array [
     "foo",
     "react-native/jest/setup.js",
-    "./setup.js",
+    "<PROJECT_ROOT>/lib/enhancers/react-native/setup.js",
   ],
   "testEnvironment": "jsdom",
   "transform": Object {
