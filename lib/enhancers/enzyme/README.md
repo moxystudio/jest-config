@@ -42,20 +42,20 @@ An enhancer for React Native projects tested with [Enzyme](https://github.com/ai
 - **Wrapper snapshotting**: Ability to snapshot Enzyme wrappers by using [enzyme-to-json](https://www.npmjs.com/package/enzyme-to-json).
 - **Ignore certain warnings and errors**: [Ignore warnings and errors](https://github.com/enzymejs/enzyme/issues/831) produced by React due to the fact that we are using JSDOM in React Native, as [prescribed](https://enzymejs.github.io/enzyme/docs/guides/react-native.html) by Enzyme.
 - **Extended matchers**: Make assertions easier and clearer by using `jest-enzyme` [matchers](https://github.com/FormidableLabs/enzyme-matchers/tree/master/packages/jest-enzyme#assertions). Only React Native-compatible matchers are installed:
-    - `toBeDisabled()`,
-    - `toBeEmptyRender()`,
-    - `toExist()`,
-    - `toContainMatchingElement()`,
-    - `toContainMatchingElements()`,
-    - `toContainExactlyOneMatchingElement()`,
-    - `toContainReact()`,
-    - `toHaveDisplayName()`,
-    - `toHaveProp()`,
-    - `toHaveRef()`,
-    - `toHaveState()`,
-    - `toIncludeText()`,
-    - `toMatchElement()`,
-    - `toMatchSelector()`,
+    - `toBeDisabled()`
+    - `toBeEmptyRender()`
+    - `toExist()`
+    - `toContainMatchingElement()`
+    - `toContainMatchingElements()`
+    - `toContainExactlyOneMatchingElement()`
+    - `toContainReact()`
+    - `toHaveDisplayName()`
+    - `toHaveProp()`
+    - `toHaveRef()`
+    - `toHaveState()`
+    - `toIncludeText()`
+    - `toMatchElement()`
+    - `toMatchSelector()`
 
 ## Usage
 

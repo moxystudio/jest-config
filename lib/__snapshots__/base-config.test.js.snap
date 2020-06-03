@@ -4,6 +4,7 @@ exports[`should match snapshot 1`] = `
 Object {
   "automock": false,
   "bail": 0,
+  "browser": false,
   "cache": true,
   "cacheDirectory": "<TEMP_DIR>/jest_1",
   "changedFilesWithAncestor": false,
@@ -33,6 +34,7 @@ Object {
   "globals": Object {},
   "haste": Object {
     "computeSha1": false,
+    "providesModuleNodeModules": Array [],
     "throwOnModuleCollision": false,
   },
   "maxConcurrency": 5,
