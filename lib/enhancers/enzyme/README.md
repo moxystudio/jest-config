@@ -22,7 +22,7 @@ const { compose, baseConfig, withEnzymeWeb } = require('@moxy/jest-config');
 
 module.exports = compose(
     baseConfig(),
-    withEnzyme('enzyme-adapter-react-16'),
+    withEnzymeWeb('enzyme-adapter-react-16'),
 );
 ```
 
@@ -62,15 +62,24 @@ An enhancer for React Native projects tested with [Enzyme](https://github.com/ai
 To use this enhancer, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the base configuration!
 
 ```js
-const { compose, baseConfig, withEnzymeWeb } = require('@moxy/jest-config');
+const { compose, baseConfig, withEnzymeReactNative } = require('@moxy/jest-config');
 
 module.exports = compose(
     baseConfig(),
-    withEnzyme('enzyme-adapter-react-16'),
+    withEnzymeReactNative('enzyme-adapter-react-16', options),
 );
 ```
 
 ⚠️ Note that you **must install** the Enzyme adapter yourself. In the example above, you would have to install `enzyme-adapter-react-16`:
+
+### options
+
+#### ignoreExtraMessagePatterns
+
+Type: `Array`
+Default: `[]`
+
+An array of regexp pattern strings that are matched against errors or warnings emitted by React and filtered out. There are several messages which already ignored by default. This option allows to exclude additional messages if necessary.
 
 ```sh
 $ npm install --save-dev enzyme-adapter-react-16
