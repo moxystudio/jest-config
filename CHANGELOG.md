@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.1](https://github.com/moxystudio/jest-config/compare/v4.2.0...v4.2.1) (2020-06-05)
+
+
+### Bug Fixes
+
+* ignore known enzyme/jsdom warnings emitted in React Native ([9f97533](https://github.com/moxystudio/jest-config/commit/9f97533be936c634134dfec32ff4f63ca046406c))
+* use require.resolve to include React Native setup file ([1f09586](https://github.com/moxystudio/jest-config/commit/1f09586707b1b8cea07d67ed46ab295bf81f5e5b))
+
 ## [4.2.0](https://github.com/moxystudio/jest-config/compare/v4.1.0...v4.2.0) (2020-05-06)
 
 
