@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "haste": Object {
+    "defaultPlatform": "ios",
+    "foo": "bar",
+    "platforms": Array [
+      "android",
+      "ios",
+      "native",
+    ],
+  },
+  "setupFiles": Array [
+    "foo",
+    "react-native/jest/setup.js",
+    "<PROJECT_ROOT>/packages/jest-config-react-native/lib/setup.js",
+  ],
+  "testEnvironment": "jsdom",
+  "transform": Object {
+    "foz": "baz",
+  },
+  "transformIgnorePatterns": Array [
+    "node_modules/(?!(jest-)?react-native(-.*)?/|@react-native-community/)",
+  ],
+}
+`;

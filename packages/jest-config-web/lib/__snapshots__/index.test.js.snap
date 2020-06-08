@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "moduleNameMapper": Object {
+    "/.css$": "<PROJECT_ROOT>/node_modules/identity-obj-proxy/src/index.js",
+    "foz": "baz",
+  },
+  "testEnvironment": "jsdom",
+  "transform": Object {
+    "foo": "bar",
+  },
+}
+`;

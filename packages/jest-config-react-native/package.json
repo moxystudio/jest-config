@@ -1,0 +1,36 @@
+{
+  "name": "@moxy/jest-config-react-native",
+  "description": "MOXY's Jest configuration enhancer for React Native apps",
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "!**/*.test.js",
+    "!**/__snapshots__"
+  ],
+  "keywords": [
+    "jest-config",
+    "jestconfig",
+    "jest",
+    "test",
+    "preset",
+    "react-native"
+  ],
+  "author": "João Silva <joao.silva@moxy.studio>",
+  "homepage": "https://github.com/moxystudio/jest-config",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:moxystudio/jest-config.git"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "devDependencies": {
+    "@moxy/jest-config-base": "0.0.0"
+  },
+  "peerDependencies": {
+    "jest": ">= 24.9.0 <= 26",
+    "react-native": "^0.61.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

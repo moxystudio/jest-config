@@ -1,143 +1,115 @@
 # jest-config
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][build-status-image]][build-status-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
+[![Build Status][build-status-image]][build-status-url] [![Coverage Status][codecov-image]][codecov-url]
 
-[npm-url]:https://npmjs.org/package/@moxy/jest-config
-[downloads-image]:https://img.shields.io/npm/dm/@moxy/jest-config.svg
-[npm-image]:https://img.shields.io/npm/v/@moxy/jest-config.svg
 [build-status-url]:https://github.com/moxystudio/jest-config/actions
 [build-status-image]:https://img.shields.io/github/workflow/status/moxystudio/jest-config/Node%20CI/master
 [codecov-url]:https://codecov.io/gh/moxystudio/jest-config
 [codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/jest-config/master.svg
-[david-dm-url]:https://david-dm.org/moxystudio/jest-config
-[david-dm-image]:https://img.shields.io/david/moxystudio/jest-config.svg
-[david-dm-dev-url]:https://david-dm.org/moxystudio/jest-config?type=dev
-[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/jest-config.svg
 
-MOXY's Jest configuration to be used across several JavaScript projects.
-
-## Installation
-
-```sh
-$ npm install --save-dev jest @moxy/jest-config
-```
+MOXY's set of [Jest](https://jestjs.io/) configuration packages to be used across several JavaScript projects.
 
 ## How it works
 
-This package contains a **base** configuration and a set of **enhancers**. You may combine them to configure Jest for different types of projects.
+This package contains two sets of Jest configurations to be used in JavaScript projects:
+
+- the **base** configuration, which defines standard settings to be shared by all projects.
+- the **enhancers**, which contain settings targeted to specific testing frameworks and enviroments, such as: browsers, React Native, Enzyme, Testing Library, etc..
+
+For more information on how to use each package and their respective configurations, please refer to the READMEs by following the links below. You may also check the examples listed in [Typical configs](#typical-configs) below to see learn how the packages may be combined for the most common scenarios.
 
 ### Base config
 
-`baseConfig` is the base point of this configuration. It includes all defaults offered by [`jest-config`](https://jestjs.io/docs/en/configuration#defaults), and has project agnostic configurations, meant to help any project regardless of their purpose, including:
+The base config is published as [`@moxy/jest-config-base`](packages/jest-config-base). Check out its README to learn how to use it.
 
-- **Test match**: Tweaks `testMatch` so that only files named `test.js` or files ending with `.test.js` are considered test files, even if they are inside `__tests__` or any other folder.
-- **Test path ignore patterns**: Tweaks `testPathIgnorePatterns` to ignore common folders, such as `docusaurus`.
-- **Transform**: Enables Babel so that [`jest.mock()`](https://jestjs.io/docs/en/jest-object#jestmockmodulename-factory-options) and similar functions are automatically hoisted to the top. If your project uses Babel, its config will be read and used to transpile code.
-- **Coverage**: Enables coverage for CI, a feature supported by [`ci-info`](https://github.com/watson/ci-info), which you can check for information about supported CI services.
-- **Coverage thresholds**: For a good balance between strict but workable thresholds.
-- **Snapshot serializing**: To remove absolute paths from your snapshots, reducing conflicts in CI.
-
-### Enhancers
+### Enhancer configs
 
 There are several **enhancer** packages, which are intended to be used in conjunction with the **base** configuration:
 
-- [`withWeb`](lib/enhancers/web/) - Adds setup for Web projects.
-- [`withReactNative`](lib/enhancers/react-native/) - Adds setup for [React Native](https://reactnative.dev/) projects.
-- [`withRTL`](lib/enhancers/testing-library/#withrtl) - Adds setup for projects using [Testing Library](https://testing-library.com).
-- [`withEnzymeWeb`](lib/enhancers/enzyme/#withenzymeweb) & [`withEnzymeReactNative`](lib/enhancers/enzyme/#withenzymereactnative) - Adds setup for projects using [Enzyme](https://github.com/airbnb/enzyme).
+- [`@moxy/jest-config-web`](packages/jest-config-web) - If you're developing a web project.
+- [`@moxy/jest-config-react-native](packages/jest-config-react-native) - If you're developing a [React Native](https://reactnative.dev/) app.
+- [`@moxy/jest-config-enzyme](packages/jest-config-enzyme) - If you're using [Enzyme](https://enzymejs.github.io/enzyme/) framework.
+- [`@moxy/jest-config-testing-library](packages/jest-config-testing-library) - If you're using [React Testing Library (RTL)](https://github.com/testing-library/react-testing-library) or [Native Testing Library (NTL)](https://github.com/testing-library/native-testing-library) frameworks.
 
-## Usage
-
-Create `jest.config.js` at the root of your project:
-
-```js
-const { baseConfig } = require('@moxy/jest-config');
-
-module.exports = baseConfig();
-```
-
-The `baseConfig` function accepts a optional parameter that allows to specify the Jest environment, which can be `jsdom` (default) or `node`. As an example, for Node.js projects you would use like so:
-
-```js
-const { baseConfig } = require('@moxy/jest-config');
-
-module.exports = baseConfig('node');
-```
-
-Alternatively, you may pass a path to a custom environment. In fact, we offer the following custom environments:
+# Typical configs
 
 <details>
-  <summary><code>@moxy/jest-config/environments/node-single-context</code></summary>
+    <summary>Node.js project</summary>
 
-  Special Node environment class for Jest which runs all scripts in the same context. This effectively disables the sandbox isolation to circumvent issues with Jest's [sandboxing](https://github.com/facebook/jest/issues/2549), which causes subtle bugs in specific situations, such as in code that relies in `instanceof` checks.
-
-  ```js
-  const { baseConfig } = require('@moxy/jest-config');
-
-  module.exports = baseConfig('@moxy/jest-config/environments/node-single-context');
-  ```
-
-  > ⚠️ Only activate this environment if you are having problems with the aforementioned issue, and before trying other workarounds.
+    ```js
+    const { baseConfig } = require('@moxy/jest-config-base');
+    
+    module.exports = baseConfig('node');
+    ```
 </details>
 
-### Composing enhancers
+<details>
+    <summary>Web project with Enzyme</summary>
 
-To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the base configuration! Here's an example of using `compose`:
+    ```js
+    const { compose, baseConfig } = require('@moxy/jest-config-base');
+    const withWeb = require('@moxy/jest-config-web');
+    const { withEnzymeWeb } = require('@moxy/jest-config-enzyme');
+    
+    module.exports = compose(
+        baseConfig(),
+        withWeb(),
+        withEnzymeWeb('enzyme-adapter-react-16'),
+    );
+    ```
+</details>
 
-```js
-const { compose, baseConfig, withWeb, withRTL } = require('@moxy/jest-config');
+<details>
+    <summary>Web project with RTL</summary>
 
-module.exports = compose(
-    baseConfig(),
-    withWeb(),
-    withRTL(),
-);
-```
+    ```js
+    const { compose, baseConfig } = require('@moxy/jest-config-base');
+    const withWeb = require('@moxy/jest-config-web');
+    const { withRTL } = require('@moxy/jest-config-testing-library');
+    
+    module.exports = compose(
+        baseConfig(),
+        withWeb(),
+        withRTL(),
+    );
+    ```
+</details>
 
-You may also use `compose` to add your own inline enhancer:
+<details>
+    <summary>React Native project with Enzyme</summary>
 
-```js
-const { compose, baseConfig } = require('@moxy/jest-config');
+    ```js
+    const { compose, baseConfig } = require('@moxy/jest-config-base');
+    const withReactNative = require('@moxy/jest-config-react-native');
+    const { withEnzymeNative } = require('@moxy/jest-config-enzyme');
+    
+    module.exports = compose(
+        baseConfig(),
+        withReactNative(),
+        withEnzymeNative('enzyme-adapter-react-16'),
+    );
+    ```
+</details>
 
-module.exports = compose(
-    baseConfig(),
-    (config) => ({
-        ...config,
-        // Do not test `.data.js` files
-        testPathIgnorePatterns: [
-            ...config.pathIgnorePatterns,
-            '/.*.data.js$/'
-        ];
-    }),
-);
-```
+<details>
+    <summary>React Native project with NTL</summary>
 
-### Without compose
+    ```js
+    const { compose, baseConfig } = require('@moxy/jest-config-base');
+    const withReactNative = require('@moxy/jest-config-react-native');
+    const { withNTL } = require('@moxy/jest-config-testing-library');
+    
+    module.exports = compose(
+        baseConfig('node'),
+        withReactNative(),
+        withNTL(),
+    );
+    ```
+</details>
 
-If you want to modify the base config without using `compose`, you may change the config imperatively like so:
+## Older versions
 
-```js
-const { baseConfig } = require('@moxy/jest-config');
-
-const config = baseConfig();
-
-// Do not test `.data.js` files
-config.testPathIgnorePatterns = [
-    ...config.testPathIgnorePatterns,
-    '/.*.data.js$/'
-];
-
-module.exports = config;
-```
-
-## Tests
-
-Any parameter passed to the `test` command is passed down to Jest.
-
-```sh
-$ npm t
-$ npm t -- --watch  # To run watch mode
-```
+If you want to read the change log of an older version, please check [here](https://github.com/moxystudio/jest-config/blob/v4.2.1/CHANGELOG.md).
 
 ## License
 

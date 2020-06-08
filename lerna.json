@@ -1,0 +1,21 @@
+{
+    "packages": [
+        "packages/*"
+    ],
+    "version": "5.0.0",
+    "command": {
+        "bootstrap": {
+            "hoist": true
+        },
+        "version": {
+            "conventionalCommits": true,
+            "changelogPreset": "conventionalcommits",
+            "message": "chore(release): %v"
+        }
+    },
+    "ignoreChanges": [
+        "**/?(*.)test.js",
+        "**/__mocks__/**",
+        "**/*.md"
+    ]
+}

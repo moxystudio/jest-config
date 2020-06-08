@@ -1,0 +1,40 @@
+{
+  "name": "@moxy/jest-config-enzyme",
+  "description": "MOXY's Jest configuration enhancer for Enzyme",
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "!**/*.test.js",
+    "!**/__snapshots__"
+  ],
+  "keywords": [
+    "jest-config",
+    "jestconfig",
+    "jest",
+    "test",
+    "preset",
+    "enzyme"
+  ],
+  "author": "João Silva <joao.silva@moxy.studio>",
+  "homepage": "https://github.com/moxystudio/jest-config",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:moxystudio/jest-config.git"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-matchers": "^7.1.2",
+    "enzyme-to-json": "^3.4.4"
+  },
+  "devDependencies": {
+    "@moxy/jest-config-base": "0.0.0"
+  },
+  "peerDependencies": {
+    "jest": ">= 24.9.0 <= 26"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

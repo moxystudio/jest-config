@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withNTL should match snapshot 1`] = `
+Object {
+  "setupFilesAfterEnv": Array [
+    "foo",
+    "<PROJECT_ROOT>/node_modules/@testing-library/jest-native/extend-expect.js",
+  ],
+  "testEnvironment": "node",
+}
+`;
+
+exports[`withRTL should match snapshot 1`] = `
+Object {
+  "setupFilesAfterEnv": Array [
+    "foo",
+    "<PROJECT_ROOT>/node_modules/@testing-library/jest-dom/extend-expect.js",
+  ],
+  "testEnvironment": "jsdom",
+}
+`;
