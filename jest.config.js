@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./lib').baseConfig();
+module.exports = require('./packages/jest-config-base').baseConfig();

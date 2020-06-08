@@ -1,0 +1,39 @@
+{
+  "name": "@moxy/jest-config-base",
+  "description": "MOXY's Jest base configuration",
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "environments",
+    "!**/*.test.js",
+    "!**/__snapshots__"
+  ],
+  "keywords": [
+    "jest-config",
+    "jestconfig",
+    "jest",
+    "test",
+    "preset"
+  ],
+  "author": "João Silva <joao.silva@moxy.studio>",
+  "homepage": "https://github.com/moxystudio/jest-config",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:moxystudio/jest-config.git"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "@babel/core": "^7.0.0",
+    "babel-jest": "^26.0.0",
+    "ci-info": "^2.0.0",
+    "jest-config": "^26.0.0",
+    "jest-serializer-path": "^0.1.15"
+  },
+  "peerDependencies": {
+    "jest": ">= 24.9.0 <= 26"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

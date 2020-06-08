@@ -1,0 +1,40 @@
+{
+  "name": "@moxy/jest-config-web",
+  "description": "MOXY's Jest configuration enhancer for web projects",
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "!**/*.test.js",
+    "!**/__snapshots__"
+  ],
+  "keywords": [
+    "jest-config",
+    "jestconfig",
+    "jest",
+    "test",
+    "preset",
+    "react"
+  ],
+  "author": "João Silva <joao.silva@moxy.studio>",
+  "homepage": "https://github.com/moxystudio/jest-config",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:moxystudio/jest-config.git"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "identity-obj-proxy": "^3.0.0",
+    "mime": "^2.4.4"
+  },
+  "devDependencies": {
+    "@moxy/jest-config-base": "0.0.0",
+    "tmp-sync": "^1.1.2"
+  },
+  "peerDependencies": {
+    "jest": ">= 24.9.0 <= 26"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

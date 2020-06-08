@@ -1,0 +1,42 @@
+{
+  "name": "@moxy/jest-config-testing-library",
+  "description": "MOXY's Jest configuration enhancer for RTL and NTL",
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "!**/*.test.js",
+    "!**/__snapshots__"
+  ],
+  "keywords": [
+    "jest-config",
+    "jestconfig",
+    "jest",
+    "test",
+    "preset",
+    "rtl",
+    "rntl",
+    "testing-library",
+    "react-native"
+  ],
+  "author": "João Silva <joao.silva@moxy.studio>",
+  "homepage": "https://github.com/moxystudio/jest-config",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:moxystudio/jest-config.git"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.0.0",
+    "@testing-library/jest-native": "^3.1.0"
+  },
+  "devDependencies": {
+    "@moxy/jest-config-base": "0.0.0"
+  },
+  "peerDependencies": {
+    "jest": ">= 24.9.0 <= 26"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
