@@ -99,7 +99,7 @@ module.exports = compose(
 
 #### ignoreExtraMessagePatterns
 
-Type: `Array`
+Type: `Array`  
 Default: `[]`
 
 An array of regexp pattern strings that are matched against errors or warnings emitted by React and filtered out. There are several messages which already ignored by default. This option allows to exclude additional messages if necessary.

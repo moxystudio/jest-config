@@ -27,84 +27,89 @@ The base config is published as [`@moxy/jest-config-base`](packages/jest-config-
 There are several **enhancer** packages, which are intended to be used in conjunction with the **base** configuration:
 
 - [`@moxy/jest-config-web`](packages/jest-config-web) - If you're developing a web project.
-- [`@moxy/jest-config-react-native](packages/jest-config-react-native) - If you're developing a [React Native](https://reactnative.dev/) app.
-- [`@moxy/jest-config-enzyme](packages/jest-config-enzyme) - If you're using [Enzyme](https://enzymejs.github.io/enzyme/) framework.
-- [`@moxy/jest-config-testing-library](packages/jest-config-testing-library) - If you're using [React Testing Library (RTL)](https://github.com/testing-library/react-testing-library) or [Native Testing Library (NTL)](https://github.com/testing-library/native-testing-library) frameworks.
+- [`@moxy/jest-config-react-native`](packages/jest-config-react-native) - If you're developing a [React Native](https://reactnative.dev/) app.
+- [`@moxy/jest-config-enzyme`](packages/jest-config-enzyme) - If you're using [Enzyme](https://enzymejs.github.io/enzyme/) framework.
+- [`@moxy/jest-config-testing-library`](packages/jest-config-testing-library) - If you're using [React Testing Library (RTL)](https://github.com/testing-library/react-testing-library) or [Native Testing Library (NTL)](https://github.com/testing-library/native-testing-library) frameworks.
 
 # Typical configs
 
 <details>
-    <summary>Node.js project</summary>
+  <summary>Node.js project</summary>
 
-    ```js
-    const { baseConfig } = require('@moxy/jest-config-base');
+  ```js
+  const { baseConfig } = require('@moxy/jest-config-base');
     
-    module.exports = baseConfig('node');
-    ```
+  module.exports = baseConfig('node');
+  ```
+
 </details>
 
 <details>
-    <summary>Web project with Enzyme</summary>
+  <summary>Web project with Enzyme</summary>
 
-    ```js
-    const { compose, baseConfig } = require('@moxy/jest-config-base');
-    const withWeb = require('@moxy/jest-config-web');
-    const { withEnzymeWeb } = require('@moxy/jest-config-enzyme');
+  ```js
+  const { compose, baseConfig } = require('@moxy/jest-config-base');
+  const withWeb = require('@moxy/jest-config-web');
+  const { withEnzymeWeb } = require('@moxy/jest-config-enzyme');
     
-    module.exports = compose(
-        baseConfig(),
-        withWeb(),
-        withEnzymeWeb('enzyme-adapter-react-16'),
-    );
-    ```
+  module.exports = compose(
+    baseConfig(),
+    withWeb(),
+    withEnzymeWeb('enzyme-adapter-react-16'),
+  );
+  ```
+
 </details>
 
 <details>
-    <summary>Web project with RTL</summary>
+  <summary>Web project with RTL</summary>
 
-    ```js
-    const { compose, baseConfig } = require('@moxy/jest-config-base');
-    const withWeb = require('@moxy/jest-config-web');
-    const { withRTL } = require('@moxy/jest-config-testing-library');
+  ```js
+  const { compose, baseConfig } = require('@moxy/jest-config-base');
+  const withWeb = require('@moxy/jest-config-web');
+  const { withRTL } = require('@moxy/jest-config-testing-library');
     
-    module.exports = compose(
-        baseConfig(),
-        withWeb(),
-        withRTL(),
-    );
-    ```
+  module.exports = compose(
+    baseConfig(),
+    withWeb(),
+    withRTL(),
+  );
+  ```
+
 </details>
 
 <details>
-    <summary>React Native project with Enzyme</summary>
+  <summary>React Native project with Enzyme</summary>
 
-    ```js
-    const { compose, baseConfig } = require('@moxy/jest-config-base');
-    const withReactNative = require('@moxy/jest-config-react-native');
-    const { withEnzymeNative } = require('@moxy/jest-config-enzyme');
+  ```js
+  const { compose, baseConfig } = require('@moxy/jest-config-base');
+  const withReactNative = require('@moxy/jest-config-react-native');
+  const { withEnzymeNative } = require('@moxy/jest-config-enzyme');
     
-    module.exports = compose(
-        baseConfig(),
-        withReactNative(),
-        withEnzymeNative('enzyme-adapter-react-16'),
-    );
-    ```
+  module.exports = compose(
+    baseConfig(),
+    withReactNative(),
+    withEnzymeNative('enzyme-adapter-react-16'),
+  );
+  ```
+
 </details>
 
 <details>
-    <summary>React Native project with NTL</summary>
+  <summary>React Native project with NTL</summary>
 
-    ```js
-    const { compose, baseConfig } = require('@moxy/jest-config-base');
-    const withReactNative = require('@moxy/jest-config-react-native');
-    const { withNTL } = require('@moxy/jest-config-testing-library');
+  ```js
+  const { compose, baseConfig } = require('@moxy/jest-config-base');
+  const withReactNative = require('@moxy/jest-config-react-native');
+  const { withNTL } = require('@moxy/jest-config-testing-library');
     
-    module.exports = compose(
-        baseConfig('node'),
-        withReactNative(),
-        withNTL(),
-    );
-    ```
+  module.exports = compose(
+    baseConfig('node'),
+    withReactNative(),
+    withNTL(),
+  );
+  ```
+    
 </details>
 
 ## Older versions
