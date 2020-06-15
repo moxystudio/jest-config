@@ -1,7 +1,7 @@
 {
   "name": "@moxy/jest-config-enzyme",
   "description": "MOXY's Jest configuration enhancer for Enzyme",
-  "version": "0.0.0",
+  "version": "5.0.0",
   "files": [
     "lib",
     "!**/*.test.js",
@@ -29,7 +29,7 @@
     "enzyme-to-json": "^3.4.4"
   },
   "devDependencies": {
-    "@moxy/jest-config-base": "0.0.0"
+    "@moxy/jest-config-base": "^5.0.0"
   },
   "peerDependencies": {
     "jest": ">= 24.9.0 <= 26"

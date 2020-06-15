@@ -1,7 +1,7 @@
 {
   "name": "@moxy/jest-config-testing-library",
   "description": "MOXY's Jest configuration enhancer for RTL and NTL",
-  "version": "0.0.0",
+  "version": "5.0.0",
   "files": [
     "lib",
     "!**/*.test.js",
@@ -31,7 +31,7 @@
     "@testing-library/jest-native": "^3.1.0"
   },
   "devDependencies": {
-    "@moxy/jest-config-base": "0.0.0"
+    "@moxy/jest-config-base": "^5.0.0"
   },
   "peerDependencies": {
     "jest": ">= 24.9.0 <= 26"
