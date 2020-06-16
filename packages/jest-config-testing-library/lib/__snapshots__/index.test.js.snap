@@ -2,9 +2,19 @@
 
 exports[`withNTL should match snapshot 1`] = `
 Object {
+  "setupFiles": Array [
+    "bar",
+    "react-native/jest/setup.js",
+    "./dist/preset/setup.js",
+  ],
   "setupFilesAfterEnv": Array [
     "foo",
     "<PROJECT_ROOT>/node_modules/@testing-library/jest-native/extend-expect.js",
+    "@testing-library/react-native/cleanup-after-each",
+  ],
+  "snapshotSerializers": Array [
+    "baz",
+    "./dist/preset/serializer.js",
   ],
   "testEnvironment": "node",
 }

@@ -50,6 +50,8 @@ module.exports = compose(
 
 ⚠️ Note that you **must install** the Enzyme adapter yourself. In the example above, you would have to install `enzyme-adapter-react-16`:
 
+⚠️ Make sure `withEnzymeWeb` is composed only after `withWeb` from `@moxy/jest-config-web`.
+
 ```sh
 $ npm install --save-dev enzyme-adapter-react-16
 ```
@@ -94,6 +96,8 @@ module.exports = compose(
 ```
 
 ⚠️ Note that you **must install** the Enzyme adapter yourself. In the example above, you would have to install `enzyme-adapter-react-16`:
+
+⚠️ Make sure `withEnzymeReactNative` is composed only after `withReactNative` from `@moxy/jest-config-react-native`.
 
 ### options
 

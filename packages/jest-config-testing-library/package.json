@@ -4,6 +4,7 @@
   "version": "5.0.0",
   "files": [
     "lib",
+    "!**/__mocks__",
     "!**/*.test.js",
     "!**/__snapshots__"
   ],

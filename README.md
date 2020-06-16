@@ -55,7 +55,7 @@ There are several **enhancer** packages, which are intended to be used in conjun
   module.exports = compose(
     baseConfig(),
     withWeb(),
-    withEnzymeWeb('enzyme-adapter-react-16'),
+    withEnzymeWeb('enzyme-adapter-react-16'), // ⚠️ Always after .withWeb
   );
   ```
 
@@ -72,7 +72,7 @@ There are several **enhancer** packages, which are intended to be used in conjun
   module.exports = compose(
     baseConfig(),
     withWeb(),
-    withRTL(),
+    withRTL(), // ⚠️ Always after .withWeb
   );
   ```
 
@@ -84,12 +84,12 @@ There are several **enhancer** packages, which are intended to be used in conjun
   ```js
   const { compose, baseConfig } = require('@moxy/jest-config-base');
   const withReactNative = require('@moxy/jest-config-react-native');
-  const { withEnzymeNative } = require('@moxy/jest-config-enzyme');
+  const { withEnzymeReactNative } = require('@moxy/jest-config-enzyme');
     
   module.exports = compose(
     baseConfig(),
     withReactNative(),
-    withEnzymeNative('enzyme-adapter-react-16'),
+    withEnzymeReactNative('enzyme-adapter-react-16'), // ⚠️ Always after .withReactNative
   );
   ```
 
@@ -106,7 +106,7 @@ There are several **enhancer** packages, which are intended to be used in conjun
   module.exports = compose(
     baseConfig('node'),
     withReactNative(),
-    withNTL(),
+    withNTL(), // ⚠️ Always after .withReactNative
   );
   ```
     
