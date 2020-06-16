@@ -48,6 +48,8 @@ module.exports = compose(
 );
 ```
 
+⚠️ Make sure `withRTL` is composed only after `withWeb` from `@moxy/jest-config-web`.
+
 # withNTL
 
 An enhancer for React Native apps tested with Native Testing Library.
@@ -69,3 +71,5 @@ module.exports = compose(
     withNTL(),
 );
 ```
+
+⚠️ Make sure `withNTL` is composed only after `withReactNative` from `@moxy/jest-config-react-native`.
