@@ -1,7 +1,7 @@
 {
   "name": "@moxy/jest-config-testing-library",
   "description": "MOXY's Jest configuration enhancer for RTL and NTL",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "files": [
     "lib",
     "!**/__mocks__",
