@@ -1,6 +1,11 @@
 {
   "name": "root",
   "private": true,
+  "homepage": "https://github.com/moxystudio/jest-config",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:moxystudio/jest-config.git"
+  },
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "test": "jest",
