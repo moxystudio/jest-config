@@ -37,8 +37,10 @@ There are several **enhancer** packages, which are intended to be used in conjun
   <summary>Node.js project</summary>
 
   ```js
+  'use strict';
+
   const { baseConfig } = require('@moxy/jest-config-base');
-    
+
   module.exports = baseConfig('node');
   ```
 
@@ -53,7 +55,7 @@ There are several **enhancer** packages, which are intended to be used in conjun
   const { compose, baseConfig } = require('@moxy/jest-config-base');
   const withWeb = require('@moxy/jest-config-web');
   const { withRTL } = require('@moxy/jest-config-testing-library');
-    
+
   module.exports = compose(
       baseConfig(),
       withWeb(),
@@ -72,7 +74,7 @@ There are several **enhancer** packages, which are intended to be used in conjun
   const { compose, baseConfig } = require('@moxy/jest-config-base');
   const withWeb = require('@moxy/jest-config-web');
   const { withEnzymeWeb } = require('@moxy/jest-config-enzyme');
-    
+
   module.exports = compose(
       baseConfig(),
       withWeb(),
@@ -91,14 +93,14 @@ There are several **enhancer** packages, which are intended to be used in conjun
   const { compose, baseConfig } = require('@moxy/jest-config-base');
   const withReactNative = require('@moxy/jest-config-react-native');
   const { withNTL } = require('@moxy/jest-config-testing-library');
-    
+
   module.exports = compose(
       baseConfig('node'),
       withReactNative(),
       withNTL(), // ⚠️ Always after .withReactNative
   );
   ```
-    
+
 </details>
 
 <details>
@@ -106,11 +108,11 @@ There are several **enhancer** packages, which are intended to be used in conjun
 
   ```js
   'use strict';
-  
+
   const { compose, baseConfig } = require('@moxy/jest-config-base');
   const withReactNative = require('@moxy/jest-config-react-native');
   const { withEnzymeReactNative } = require('@moxy/jest-config-enzyme');
-    
+
   module.exports = compose(
       baseConfig(),
       withReactNative(),
