@@ -35,6 +35,8 @@ $ npm install --save-dev jest @moxy/eslint-config-base
 Create `jest.config.js` at the root of your project:
 
 ```js
+'use strict';
+
 const { baseConfig } = require('@moxy/jest-config-base');
 
 module.exports = baseConfig();
@@ -56,6 +58,8 @@ Alternatively, you may pass a path to a custom environment. In fact, we offer th
   Special Node environment class for Jest which runs all scripts in the same context. This effectively disables the sandbox isolation to circumvent issues with Jest's [sandboxing](https://github.com/facebook/jest/issues/2549), which causes subtle bugs in specific situations, such as in code that relies in `instanceof` checks.
 
   ```js
+  'use strict';
+
   const { baseConfig } = require('@moxy/jest-config');
 
   module.exports = baseConfig('@moxy/jest-config/environments/node-single-context');
@@ -69,6 +73,8 @@ Alternatively, you may pass a path to a custom environment. In fact, we offer th
 To use enhancers, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the base configuration! Here's an example of using `compose`:
 
 ```js
+'use strict';
+
 const { compose, baseConfig } = require('@moxy/jest-config-base');
 const withMyEnhancer = require('<your-own-enhancer>');
 
@@ -81,6 +87,8 @@ module.exports = compose(
 Enhancers are functions which accept a single argument, i.e., Jest's config object, and return the enhanced config. You may also use `compose` to add your own inline enhancer:
 
 ```js
+'use strict';
+
 const { compose, baseConfig } = require('@moxy/jest-config');
 
 module.exports = compose(
@@ -101,6 +109,8 @@ module.exports = compose(
 If you want to modify the base config without using `compose`, you may change the config imperatively like so:
 
 ```js
+'use strict';
+
 const { baseConfig } = require('@moxy/jest-config');
 
 const config = baseConfig();
