@@ -34,6 +34,8 @@ This package should be used in conjunction with `@moxy/jest-config-base`.
 To use this enhancer, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the base configuration!
 
 ```js
+'use strict';
+
 const { compose, baseConfig } = require('@moxy/jest-config-base');
 const withReactNative = require('@moxy/jest-config-react-native');
 
@@ -50,6 +52,8 @@ The enhancer accepts an options object as the first argument with the following 
 To showcase the usefulness of `transformModules`, let's pretend that you use [React Navigation](https://reactnavigation.org/) in your project. You would need to compile its packages to make them work in Jest, so you would add them to `transformModules` like so:
 
 ```js
+'use strict';
+
 const { compose, baseConfig } = require('@moxy/jest-config');
 const withReactNative = require('@moxy/jest-config-react-native');
 

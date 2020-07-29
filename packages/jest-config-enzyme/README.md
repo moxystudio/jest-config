@@ -39,6 +39,8 @@ An enhancer for web projects tested with Enzyme.
 To use this enhancer, use the `compose` function that comes with `@moxy/jest-config-base`. **Keep in mind**, the first item should always be the base configuration!
 
 ```js
+'use strict';
+
 const { compose, baseConfig } = require('@moxy/jest-config-base');
 const { withEnzymeWeb } = require('@moxy/jest-config-enzyme');
 
@@ -86,6 +88,8 @@ An enhancer for React Native projects tested with [Enzyme](https://github.com/ai
 To use this enhancer, use the `compose` function that comes with `@moxy/jest-config-base`. **Keep in mind**, the first item should always be the base configuration!
 
 ```js
+'use strict';
+
 const { compose, baseConfig } = require('@moxy/jest-config-base');
 const { withEnzymeReactNative } = require('@moxy/jest-config-enzyme');
 

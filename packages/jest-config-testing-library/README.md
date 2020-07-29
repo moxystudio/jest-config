@@ -39,6 +39,8 @@ An enhancer for web projects tested with React Testing Library.
 To use this enhancer, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the base configuration!
 
 ```js
+'use strict';
+
 const { compose, baseConfig } = require('@moxy/jest-config-base');
 const { withRTL } = require('@moxy/jest-config-testing-library');
 
@@ -63,6 +65,8 @@ An enhancer for React Native apps tested with Native Testing Library.
 To use this enhancer, use the `compose` function that comes with this package. **Keep in mind**, the first item should always be the base configuration!
 
 ```js
+'use strict';
+
 const { compose, baseConfig } = require('@moxy/jest-config-base');
 const { withNTL } = require('@moxy/jest-config-testing-library');
 
