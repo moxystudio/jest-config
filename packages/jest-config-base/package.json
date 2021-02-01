@@ -28,7 +28,8 @@
     "babel-jest": "^26.0.0",
     "ci-info": "^2.0.0",
     "jest-config": "^26.0.0",
-    "jest-serializer-path": "^0.1.15"
+    "jest-serializer-path": "^0.1.15",
+    "jest-watch-typeahead": "^0.6.1"
   },
   "peerDependencies": {
     "jest": ">= 24.9.0 <= 26"

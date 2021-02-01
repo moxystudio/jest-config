@@ -35,4 +35,8 @@ module.exports = (testEnvironment = 'jsdom') => ({
     testMatch: [
         '**/?(*.)test.[jt]s',
     ],
+    watchPlugins: [
+        'jest-watch-typeahead/filename',
+        'jest-watch-typeahead/testname',
+    ],
 });
