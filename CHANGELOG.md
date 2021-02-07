@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.0](https://github.com/moxystudio/jest-config/compare/v5.1.0...v5.2.0) (2021-02-07)
+
+
+### Features
+
+* add typeahead watch plugin ([c8cd450](https://github.com/moxystudio/jest-config/commit/c8cd450025bc387e35ab13a9cc7d01e2695d683e))
+
+
+
 ## 5.1.0 (2020-06-17)
 
 * feat: add native testing library setup ([07e7912](https://github.com/moxystudio/jest-config/commit/07e7912))
