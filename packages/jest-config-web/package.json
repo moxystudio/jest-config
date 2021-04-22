@@ -1,7 +1,7 @@
 {
   "name": "@moxy/jest-config-web",
   "description": "MOXY's Jest configuration enhancer for web projects",
-  "version": "5.2.0",
+  "version": "5.3.0",
   "files": [
     "lib",
     "!**/*.test.js",
@@ -28,7 +28,7 @@
     "mime": "^2.4.4"
   },
   "devDependencies": {
-    "@moxy/jest-config-base": "^5.2.0",
+    "@moxy/jest-config-base": "^5.3.0",
     "tmp-sync": "^1.1.2"
   },
   "peerDependencies": {

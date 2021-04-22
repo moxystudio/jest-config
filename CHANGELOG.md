@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.0](https://github.com/moxystudio/jest-config/compare/v5.2.0...v5.3.0) (2021-04-22)
+
+
+### Features
+
+* **base config:** add gltf file transform ([#34](https://github.com/moxystudio/jest-config/issues/34)) ([6e3ec3c](https://github.com/moxystudio/jest-config/commit/6e3ec3c907b0a47b3bea9a48a52b7001e16e0880))
+
+
+
 ## [5.2.0](https://github.com/moxystudio/jest-config/compare/v5.1.0...v5.2.0) (2021-02-07)
 
 
