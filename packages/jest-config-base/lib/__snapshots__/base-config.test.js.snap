@@ -87,7 +87,7 @@ Object {
   "transform": Object {
     "/.(eot|ttf|woff|woff2|otf)$": "<PROJECT_ROOT>/packages/jest-config-base/lib/transforms/file.js",
     "/.(mp3|flac|wav|aac|ogg|oga|mp4|m4a|webm|ogv)$": "<PROJECT_ROOT>/packages/jest-config-base/lib/transforms/file.js",
-    "/.(obj|mtl|fnt|glb)$": "<PROJECT_ROOT>/packages/jest-config-base/lib/transforms/file.js",
+    "/.(obj|mtl|fnt|gltf|glb)$": "<PROJECT_ROOT>/packages/jest-config-base/lib/transforms/file.js",
     "/.(png|jpg|jpeg|gif|webp|svg|ico|bmp)$": "<PROJECT_ROOT>/packages/jest-config-base/lib/transforms/file.js",
     "/.[jt]s$": "<PROJECT_ROOT>/node_modules/babel-jest/build/index.js",
     "/.data-url/.[^/.+?]$": "<PROJECT_ROOT>/packages/jest-config-base/lib/transforms/data-url.js",
