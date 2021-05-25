@@ -26,8 +26,6 @@ describe('withNTL', () => {
     const buildConfig = () => ({
         testEnvironment: 'node',
         setupFilesAfterEnv: ['foo'],
-        setupFiles: ['bar'],
-        snapshotSerializers: ['baz'],
     });
 
     it('should match snapshot', () => {
