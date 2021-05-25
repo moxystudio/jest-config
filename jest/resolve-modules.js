@@ -1,7 +1,7 @@
 'use strict';
 
 const VIRTUAL_MODULES = [
-    '@testing-library/react-native/cleanup-after-each',
+    // Add here modules that are not installed but which you still need to require by using require.resolve
 ];
 
 module.exports = (path, options) => {

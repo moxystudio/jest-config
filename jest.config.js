@@ -7,7 +7,8 @@ module.exports = compose(
     (config) => ({
         ...config,
         // Inspired by: https://github.com/facebook/jest/issues/9543#issuecomment-616358056
-        // A custom module resolver is needed so we can mock require.resolve with virtual modules
+        // A custom module resolver is needed so we can, e.g., mock require.resolve with virtual modules
+        // See: https://jestjs.io/docs/configuration#resolver-string
         resolver: require.resolve('./jest/resolve-modules'),
     }),
 );
