@@ -94,6 +94,7 @@ Object {
     "/.[jt]s$": "<PROJECT_ROOT>/node_modules/babel-jest/build/index.js",
     "/.data-url/.[^/.+?]$": "<PROJECT_ROOT>/packages/jest-config-base/lib/transforms/data-url.js",
     "/.inline/.[^/.+?]$": "<PROJECT_ROOT>/packages/jest-config-base/lib/transforms/inline.js",
+    "/.json5$": "<PROJECT_ROOT>/packages/jest-config-base/lib/transforms/json5.js",
   },
   "transformIgnorePatterns": Array [
     "/node_modules/",

@@ -25,7 +25,9 @@ $ npm install --save-dev jest @moxy/eslint-config-base
 
 - **Test match**: Tweaks `testMatch` so that only files named `test.js` or files ending with `.test.js` are considered test files, even if they are inside `__tests__` or any other folder.
 - **Test path ignore patterns**: Tweaks `testPathIgnorePatterns` to ignore common folders, such as `docusaurus`.
-- **Transform**: Enables Babel so that [`jest.mock()`](https://jestjs.io/docs/en/jest-object#jestmockmodulename-factory-options) and similar functions are automatically hoisted to the top. If your project uses Babel, its configuration will be read and used to transpile code.
+- **Transform**:
+    - Enables Babel so that [`jest.mock()`](https://jestjs.io/docs/en/jest-object#jestmockmodulename-factory-options) and similar functions are automatically hoisted to the top. If your project uses Babel, its configuration will be read and used to transpile code.
+    - Setups transforms for common files, such as images and files.
 - **Coverage**: Enables coverage for CI, a feature supported by [`ci-info`](https://github.com/watson/ci-info), which you can check for information about supported CI services.
 - **Coverage thresholds**: For a good balance between strict but workable thresholds.
 - **Snapshot serializing**: To remove absolute paths from your snapshots, reducing conflicts in CI.
