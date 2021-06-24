@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.0](https://github.com/moxystudio/jest-config/compare/v6.0.0...v6.1.0) (2021-06-24)
+
+
+### Features
+
+* **jest-config-base:** add json5 support ([#41](https://github.com/moxystudio/jest-config/issues/41)) ([f6898b0](https://github.com/moxystudio/jest-config/commit/f6898b017a15833d65bad3aa9ec494529749b8a7))
+
+
+
 ## [6.0.0](https://github.com/moxystudio/jest-config/compare/v5.3.0...v6.0.0) (2021-05-26)
 
 **Note:** Version bump only for package @moxy/jest-config-base

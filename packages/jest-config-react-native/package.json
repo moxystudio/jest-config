@@ -1,7 +1,7 @@
 {
   "name": "@moxy/jest-config-react-native",
   "description": "MOXY's Jest configuration enhancer for React Native apps",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "files": [
     "lib",
     "!**/*.test.js",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "devDependencies": {
-    "@moxy/jest-config-base": "^6.0.0"
+    "@moxy/jest-config-base": "^6.1.0"
   },
   "peerDependencies": {
     "jest": ">= 24.9.0 <= 26",
