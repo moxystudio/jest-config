@@ -18,6 +18,7 @@ module.exports = (testEnvironment = 'jsdom') => ({
         '\\.(mp3|flac|wav|aac|ogg|oga|mp4|m4a|webm|ogv)$': require.resolve('./transforms/file'),
         '\\.(obj|mtl|fnt|gltf|glb)$': require.resolve('./transforms/file'),
         '\\.json5$': require.resolve('./transforms/json5'),
+        '\\.xml$': require.resolve('./transforms/xml-string'),
         '\\.data-url\\.[^\\.+?]$': require.resolve('./transforms/data-url'),
         '\\.inline\\.[^\\.+?]$': require.resolve('./transforms/inline'),
     },
